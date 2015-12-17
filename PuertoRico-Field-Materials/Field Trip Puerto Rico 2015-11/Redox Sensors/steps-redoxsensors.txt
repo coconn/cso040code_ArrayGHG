@@ -1,0 +1,41 @@
+Redox sensor probe installation: what we did
+
+MACRO STEP 1: Get the items
+
+
+
+MACRO STEP 2: (In this case) Lengthen the cabling
+
+Items needed:
+- Copper wiring (AWG 16 to match current wiring, PVC insulation as thick as available)
+- Soldering iron
+- Solder (40:60 lead:tin, flux core solder, XX width)
+- Clamp to hold wires are you solder
+- Self-amalgamating tape
+- Wire strippers/wire cutters
+- Bucket for water
+- Big thing of kitchen salt
+- Multimeter
+
+Connecting the new wire:
+- We had sensors with 10 ft of cable length and wanted 30 ft of cable on each
+- We cut 20 ft lengths of our new wire, then stripped the ends of the original cable and the new cable (~1 inch)
+- We soldered the ends together
+- To prepare to solder, we watched these youtube videos:
+https://www.youtube.com/watch?v=BLfXXRfRIzY
+https://www.youtube.com/watch?v=Q9G9gaokqvM
+- We wrapped the join with self-amalgamating tape and let the wiring sit for at least 24 hours for the tape to have time to adhere to itself
+
+Checking to ensure that the new connection is waterproof:
+- After letting the tape cure, we submerged the wiring join into a bucket of very salty water (we dumped half a kg of table salt into a bucket - doesn't need to be exact)
+- We let the wires sit for at least 24 hours
+
+
+MACRO STEP 3: Install in the ground
+
+
+
+MACRO STEP 4: Datalogger set up
+
+
+
