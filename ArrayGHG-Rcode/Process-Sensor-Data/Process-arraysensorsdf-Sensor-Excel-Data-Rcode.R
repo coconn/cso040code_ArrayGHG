@@ -44,7 +44,7 @@ if(alreadybuiltcsv=="n") {
       pathfile = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan-practice/Getting things together for Whendee/"
       
       # bring in excel data
-      data <- read.xlsx(paste(pathfile,"Copy of Daily 11132013- 06282015 GAPS INCLUDED 151113.xlsx",sep=""),"Sheet2", colIndex = c(1:8))
+      data <- read.xlsx(paste(pathfile,"Copy of Daily 11132013- 12152015 GAPS INCLUDED.xlsx",sep=""),"Sheet2", colIndex = c(1:8))
       data2 <- as.data.frame(data, stringsAsFactors=FALSE)
       
       # rename cols
@@ -153,6 +153,17 @@ p1 <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_poin
 # moisture by date (mean and se)
 p2 <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
 
+# moisture and O2 into panels for combo figure
+p3a <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+
+# moisture by date (mean and se)
+p3b <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture (Mean Fraction +/- Standard Error)") + theme_bw() + theme(legend.position = "bottom", legend.direction=("horizontal"), axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+
+
+theme(legend.position = "none", plot.margin=unit(c(-0.5,1,0,1), "cm"), axis.title.x = element_blank())
+
+
+
 # save figures
 png(file = paste(pathsavefigs, "time_series_O2.png", sep=""),width=10,height=7,units="in",res=400)
 p1
@@ -161,6 +172,11 @@ dev.off()
 # save figures
 png(file = paste(pathsavefigs, "time_series_moisture.png", sep=""),width=10,height=7,units="in",res=400)
 p2
+dev.off()
+
+# save figures
+png(file = paste(pathsavefigs, "time_series_moistureO2panels.png", sep=""),width=10,height=9,units="in",res=400)
+grid.arrange(p1, p2, nrow = 2, ncol = 1)
 dev.off()
 
 

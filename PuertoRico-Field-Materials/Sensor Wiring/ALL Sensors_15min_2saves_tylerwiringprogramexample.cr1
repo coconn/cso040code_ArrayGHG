@@ -1,0 +1,257 @@
+'CR1000
+'Created by Short Cut (3.1)
+
+'Declare Variables and Units
+Dim LCount
+Dim LCount_2
+Public BattV
+Public PTemp_C
+Public T107_C(9)
+Public VW(9)
+Public PA_uS(9)
+Public LCount_3
+Public SEVolt(36)
+Public LCount_4
+Public DiffV(9)
+Public Mult(36) = {0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909,0.01,0.01,0.01,0.0909}
+Public Offs(36) = {0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631,0,0,0,-1.3631}
+Public Mult_2(9) = {0.353,0.461,0.498,0.410,0.421,0.438,0.444,0.436,0.436}
+Public Offs_2(9) = {0.890,0.692,0.822,0.767,0.788,1.221,0.591,0.594,0.677}
+Public Var1(9) = {0.2496,0.0803,0.1791,0.1526,0.1328,0.1419,0.1719,0.1345,0.1443}
+Public Var2(9) = {-0.0002,0.0129,0.0058,0.0081,0.0088,0.0079,0.006,0.0081,0.0082}
+Public Var3(9) = {0.0002,-0.00003,0.00008,0.00004,0.00003,0.00005,0.00009,0.00006,0.00005}
+
+Units BattV=Volts
+Units PTemp_C=Deg C
+Units T107_C=Deg C
+Units PA_uS=uSec
+Units SEVolt=mV
+Units DiffV=mV
+
+'Define Data Tables
+DataTable(Sample,True,-1)
+	DataInterval(0,15,Sec,10)
+	CardOut(0,-1)
+	TableFile("USB:"+Status.SerialNumber+"Sample",8,-1,0,30,Min,0,0)
+	Sample(1,T107_C(1),FP2)
+	Sample(1,T107_C(2),FP2)
+	Sample(1,T107_C(3),FP2)
+	Sample(1,T107_C(4),FP2)
+	Sample(1,T107_C(5),FP2)
+	Sample(1,T107_C(6),FP2)
+	Sample(1,T107_C(7),FP2)
+	Sample(1,T107_C(8),FP2)
+	Sample(1,T107_C(9),FP2)
+	Sample(1,VW(1),FP2)
+	Sample(1,PA_uS(1),FP2)
+	Sample(1,VW(2),FP2)
+	Sample(1,PA_uS(2),FP2)
+	Sample(1,VW(3),FP2)
+	Sample(1,PA_uS(3),FP2)
+	Sample(1,VW(4),FP2)
+	Sample(1,PA_uS(4),FP2)
+	Sample(1,VW(5),FP2)
+	Sample(1,PA_uS(5),FP2)
+	Sample(1,VW(6),FP2)
+	Sample(1,PA_uS(6),FP2)
+	Sample(1,VW(7),FP2)
+	Sample(1,PA_uS(7),FP2)
+	Sample(1,VW(8),FP2)
+	Sample(1,PA_uS(8),FP2)
+	Sample(1,VW(9),FP2)
+	Sample(1,PA_uS(9),FP2)
+	Sample(1,SEVolt(1),FP2)
+	Sample(1,SEVolt(2),FP2)
+	Sample(1,SEVolt(3),FP2)
+	Sample(1,SEVolt(4),FP2)
+	Sample(1,SEVolt(5),FP2)
+	Sample(1,SEVolt(6),FP2)
+	Sample(1,SEVolt(7),FP2)
+	Sample(1,SEVolt(8),FP2)
+	Sample(1,SEVolt(9),FP2)
+	Sample(1,SEVolt(10),FP2)
+	Sample(1,SEVolt(11),FP2)
+	Sample(1,SEVolt(12),FP2)
+	Sample(1,SEVolt(13),FP2)
+	Sample(1,SEVolt(14),FP2)
+	Sample(1,SEVolt(15),FP2)
+	Sample(1,SEVolt(16),FP2)
+	Sample(1,SEVolt(17),FP2)
+	Sample(1,SEVolt(18),FP2)
+	Sample(1,SEVolt(19),FP2)
+	Sample(1,SEVolt(20),FP2)
+	Sample(1,SEVolt(21),FP2)
+	Sample(1,SEVolt(22),FP2)
+	Sample(1,SEVolt(23),FP2)
+	Sample(1,SEVolt(24),FP2)
+	Sample(1,SEVolt(25),FP2)
+	Sample(1,SEVolt(26),FP2)
+	Sample(1,SEVolt(27),FP2)
+	Sample(1,SEVolt(28),FP2)
+	Sample(1,SEVolt(29),FP2)
+	Sample(1,SEVolt(30),FP2)
+	Sample(1,SEVolt(31),FP2)
+	Sample(1,SEVolt(32),FP2)
+	Sample(1,SEVolt(33),FP2)
+	Sample(1,SEVolt(34),FP2)
+	Sample(1,SEVolt(35),FP2)
+	Sample(1,SEVolt(36),FP2)
+	Sample(1,DiffV(1),FP2)
+	Sample(1,DiffV(2),FP2)
+	Sample(1,DiffV(3),FP2)
+	Sample(1,DiffV(4),FP2)
+	Sample(1,DiffV(5),FP2)
+	Sample(1,DiffV(6),FP2)
+	Sample(1,DiffV(7),FP2)
+	Sample(1,DiffV(8),FP2)
+	Sample(1,DiffV(9),FP2)
+EndTable
+
+DataTable(Average,True,-1)
+	DataInterval(0,15,Min,10)
+	Average(1,T107_C(1),FP2,False)
+	Average(1,T107_C(2),FP2,False)
+	Average(1,T107_C(3),FP2,False)
+	Average(1,T107_C(4),FP2,False)
+	Average(1,T107_C(5),FP2,False)
+	Average(1,T107_C(6),FP2,False)
+	Average(1,T107_C(7),FP2,False)
+	Average(1,T107_C(8),FP2,False)
+	Average(1,T107_C(9),FP2,False)
+	Average(1,VW(1),FP2,False)
+	Average(1,PA_uS(1),FP2,False)
+	Average(1,VW(2),FP2,False)
+	Average(1,PA_uS(2),FP2,False)
+	Average(1,VW(3),FP2,False)
+	Average(1,PA_uS(3),FP2,False)
+	Average(1,VW(4),FP2,False)
+	Average(1,PA_uS(4),FP2,False)
+	Average(1,VW(5),FP2,False)
+	Average(1,PA_uS(5),FP2,False)
+	Average(1,VW(6),FP2,False)
+	Average(1,PA_uS(6),FP2,False)
+	Average(1,VW(7),FP2,False)
+	Average(1,PA_uS(7),FP2,False)
+	Average(1,VW(8),FP2,False)
+	Average(1,PA_uS(8),FP2,False)
+	Average(1,VW(9),FP2,False)
+	Average(1,PA_uS(9),FP2,False)
+	Average(1,SEVolt(1),FP2,False)
+	Average(1,SEVolt(2),FP2,False)
+	Average(1,SEVolt(3),FP2,False)
+	Average(1,SEVolt(4),FP2,False)
+	Average(1,SEVolt(5),FP2,False)
+	Average(1,SEVolt(6),FP2,False)
+	Average(1,SEVolt(7),FP2,False)
+	Average(1,SEVolt(8),FP2,False)
+	Average(1,SEVolt(9),FP2,False)
+	Average(1,SEVolt(10),FP2,False)
+	Average(1,SEVolt(11),FP2,False)
+	Average(1,SEVolt(12),FP2,False)
+	Average(1,SEVolt(13),FP2,False)
+	Average(1,SEVolt(14),FP2,False)
+	Average(1,SEVolt(15),FP2,False)
+	Average(1,SEVolt(16),FP2,False)
+	Average(1,SEVolt(17),FP2,False)
+	Average(1,SEVolt(18),FP2,False)
+	Average(1,SEVolt(19),FP2,False)
+	Average(1,SEVolt(20),FP2,False)
+	Average(1,SEVolt(21),FP2,False)
+	Average(1,SEVolt(22),FP2,False)
+	Average(1,SEVolt(23),FP2,False)
+	Average(1,SEVolt(24),FP2,False)
+	Average(1,SEVolt(25),FP2,False)
+	Average(1,SEVolt(26),FP2,False)
+	Average(1,SEVolt(27),FP2,False)
+	Average(1,SEVolt(28),FP2,False)
+	Average(1,SEVolt(29),FP2,False)
+	Average(1,SEVolt(30),FP2,False)
+	Average(1,SEVolt(31),FP2,False)
+	Average(1,SEVolt(32),FP2,False)
+	Average(1,SEVolt(33),FP2,False)
+	Average(1,SEVolt(34),FP2,False)
+	Average(1,SEVolt(35),FP2,False)
+	Average(1,SEVolt(36),FP2,False)
+	Average(1,DiffV(1),FP2,False)
+	Average(1,DiffV(2),FP2,False)
+	Average(1,DiffV(3),FP2,False)
+	Average(1,DiffV(4),FP2,False)
+	Average(1,DiffV(5),FP2,False)
+	Average(1,DiffV(6),FP2,False)
+	Average(1,DiffV(7),FP2,False)
+	Average(1,DiffV(8),FP2,False)
+	Average(1,DiffV(9),FP2,False)
+EndTable
+
+'Main Program
+BeginProg
+	'Main Scan
+	Scan(15,Sec,1,0)
+		'Default Datalogger Battery Voltage measurement 'BattV'
+		Battery(BattV)
+		'Default Wiring Panel Temperature measurement 'PTemp_C'
+		PanelTemp(PTemp_C,_60Hz)
+		'Turn AM16/32 Multiplexer On
+		PortSet(2,1)
+		Delay(0,150,mSec)
+		LCount=1
+		SubScan(0,uSec,3)
+			'Switch to next AM16/32 Multiplexer channel
+			PulsePort(1,10000)
+			'107 Temperature Probe (3-wire) measurements 'T107_C()' on the AM16/32 Multiplexer
+			Therm107(T107_C(LCount),3,1,1,0,_60Hz,1,0)
+			LCount=LCount+3
+		NextSubScan
+		'Turn AM16/32 Multiplexer Off
+		PortSet(2,0)
+		Delay(0,150,mSec)
+		'Turn AM16/32 Multiplexer On
+		PortSet(4,1)
+		Delay(0,150,mSec)
+		LCount_2=1
+		SubScan(0,uSec,3)
+			'Switch to next AM416 Multiplexer channel
+			PulsePort(1,10000)
+			'CS616 Water Content Reflectometer measurements 'VW()' and 'PA_uS()' on the AM16/32 Multiplexer
+			CS616(PA_uS(LCount_2),3,4,3,3,1,0)
+			LCount_2=LCount_2+3
+		NextSubScan
+		For LCount_2=1 To 9
+			VW(LCount_2)=Var1+(Var2*PA_uS(LCount_2))+(Var3*PA_uS(LCount_2)^2)
+		Next
+		'Turn AM16/32 Multiplexer Off
+		PortSet(4,0)
+		Delay(0,150,mSec)
+		'Turn AM16/32 Multiplexer On
+		PortSet(5,1)
+		Delay(0,150,mSec)
+		LCount_3=1
+		SubScan(0,uSec,12)
+			'Switch to next AM16/32 Multiplexer channel
+			PulsePort(1,10000)
+			'Generic Single Ended Voltage measurements 'SEVolt()' on the AM16/32 Multiplexer
+			VoltSE(SEVolt(LCount_3),3,mV5000,7,True,0,_60Hz,Mult(LCount_3),Offs(LCount_3))
+			LCount_3=LCount_3+3
+		NextSubScan
+		'Turn AM16/32 Multiplexer Off
+		PortSet(5,0)
+		Delay(0,150,mSec)
+		'Turn AM16/32 Multiplexer On
+		PortSet(6,1)
+		Delay(0,150,mSec)
+		LCount_4=1
+		SubScan(0,uSec,9)
+			'Switch to next AM16/32 Multiplexer channel
+			PulsePort(1,10000)
+			'Generic Differential Voltage measurements 'DiffV()' on the AM16/32 Multiplexer
+			VoltDiff(DiffV(LCount_4),1,mV250,6,True,0,_60Hz,Mult_2(LCount_4),Offs_2(LCount_4))
+			LCount_4=LCount_4+1
+		NextSubScan
+		'Turn AM16/32 Multiplexer Off
+		PortSet(6,0)
+		Delay(0,150,mSec)
+		'Call Data Tables and Store Data
+		CallTable Sample
+		CallTable Average
+	NextScan
+EndProg

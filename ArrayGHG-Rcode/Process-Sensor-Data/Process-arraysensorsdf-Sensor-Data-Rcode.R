@@ -36,7 +36,7 @@ ste <- function(x) sqrt(var(x,na.rm=TRUE)/length(na.omit(x)))
 #pathsavefiles = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Rprocessed/"
 pathsavefiles = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan-practice/Getting things together for Whendee/"
 pathsavefigs = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Analyses/SensorFigures/"
-sensordatapath = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan/nov2015/only new data/"
+sensordatapath = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan/2015-12/"
 calibrationdatapath = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan-practice/"
 
 
@@ -207,15 +207,6 @@ tempdailylong <- ddply(temphourlylong,.(Date2, SensorID),
                       seTemp=ste(Temp),
                       smaxTemp=max(Temp, na.rm = TRUE),
                       minTemp=min(Temp, na.rm = TRUE)) # na.rm=T already in the function definition for ste()
-
-
-# this is what we do for seth's loop
-savehere <- data.frame(speciesname=as.character(),basum=numeric(), stringsAsFactors = FALSE)
-
-savehere[i, 1] <- c("foo")
-savehere[i, 2] <- c(3)
-
-
 
 
 ########################################################################
