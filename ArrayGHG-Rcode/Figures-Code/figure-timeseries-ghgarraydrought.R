@@ -72,10 +72,10 @@ topobreaks <- c("1","2","3","4","5","6","7")
 topolabs <- c("1 (Ridge)","2","3","4","5","6","7 (Valley)")
 
 # O2 by date (mean and se)
-p1 <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 \n(Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+p1 <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 \n(Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
 
 # moisture by date (mean and se)
-p2 <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture \n(Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+p2 <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture \n(Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
 
 
 #### how to get these into panels nicely????
@@ -142,6 +142,22 @@ arrayGHGdf$FluxCO2_L_umolm2s[arrayGHGdf$FluxCO2_L_umolm2s<0] <- NA
 arrayGHGdf$FluxN2O_E_nmolm2s[abs(arrayGHGdf$FluxN2O_E_nmolm2s) > 100] <- NA
 arrayGHGdf$FluxN2O_L_nmolm2s[abs(arrayGHGdf$FluxN2O_L_nmolm2s) > 100] <- NA
 
+# take out places where the deployment period of the chamber was too long or too short
+toolong <- 1001
+tooshort <- 419
+# print info about removed 
+tmp <- arrayGHGdf$MeasurementDuration_s
+tmp2 <- tmp[tmp < toolong]
+tmp3 <- tmp2[tmp2 > tooshort]
+durationok <- length(tmp3)/length(tmp)
+cat("You have removed flux measurements where chamber duration length was shorter than ", 
+    toolong, " and longer than ", tooshort, " seconds; this left ", durationok*100, 
+    "% of the samples remaining (", length(tmp3), " of ", length(tmp), ").", sep="")
+
+# take out chambers deployed too long/short
+arrayGHGdf <- subset(arrayGHGdf, MeasurementDuration_s > 419 & MeasurementDuration_s < 1001)
+
+
 ########################################################################
 # SUMMARY STATS: CO2, CH4, N2O ACROSS TRANSECTS AT EACH DATE
 
@@ -186,13 +202,13 @@ topobreaks <- c("1","2","3","4","5","6","7")
 topolabs <- c("1 (Ridge)","2","3","4","5","6","7 (Valley)")
 
 # CO2 by date (mean and se)
-p3 <- ggplot(summarytab3atmp, aes(x=Date, y=meanFluxCO2_E_umolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCO2_E_umolm2s-seFluxCO2_E_umolm2s, ymax=meanFluxCO2_E_umolm2s+seFluxCO2_E_umolm2s), alpha=0.5) + ylab("CO2 Flux (umol/m^2/s), Exp. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
+p3 <- ggplot(summarytab3atmp, aes(x=Date, y=meanFluxCO2_E_umolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCO2_E_umolm2s-seFluxCO2_E_umolm2s, ymax=meanFluxCO2_E_umolm2s+seFluxCO2_E_umolm2s), alpha=0.5) + ylab("CO2 Flux (umol/m^2/s), Exp. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
 
 # CH4 by date (mean and se)
-p4 <- ggplot(summarytab4atmp, aes(x=Date, y=meanFluxCH4_E_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCH4_E_nmolm2s-seFluxCH4_E_nmolm2s, ymax=meanFluxCH4_E_nmolm2s+seFluxCH4_E_nmolm2s), alpha=0.5) + ylab("CH4 Flux (nmol/m^2/s), Exp. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
+p4 <- ggplot(summarytab4atmp, aes(x=Date, y=meanFluxCH4_E_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCH4_E_nmolm2s-seFluxCH4_E_nmolm2s, ymax=meanFluxCH4_E_nmolm2s+seFluxCH4_E_nmolm2s), alpha=0.5) + ylab("CH4 Flux (nmol/m^2/s), Exp. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
 
 # N2O by date (mean and se)
-p5 <- ggplot(summarytab5atmp, aes(x=Date, y=meanFluxN2O_E_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxN2O_E_nmolm2s-seFluxN2O_E_nmolm2s, ymax=meanFluxN2O_E_nmolm2s+seFluxN2O_E_nmolm2s), alpha=0.5) + ylab("N2O Flux (nmol/m^2/s), Exp. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
+p5 <- ggplot(summarytab5atmp, aes(x=Date, y=meanFluxN2O_E_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxN2O_E_nmolm2s-seFluxN2O_E_nmolm2s, ymax=meanFluxN2O_E_nmolm2s+seFluxN2O_E_nmolm2s), alpha=0.5) + ylab("N2O Flux (nmol/m^2/s), Exp. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
 
 # save figures
 png(file = paste(pathsavefigs, "time_series_CO2.png", sep=""),width=10,height=7,units="in",res=400)
@@ -216,13 +232,13 @@ dev.off()
 
 
 # CO2 by date (mean and se)
-p3b <- ggplot(summarytab3ctmp, aes(x=Date, y=meanFluxCO2_L_umolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCO2_L_umolm2s-seFluxCO2_L_umolm2s, ymax=meanFluxCO2_L_umolm2s+seFluxCO2_L_umolm2s), alpha=0.5) + ylab("CO2 Flux (umol/m^2/s), Lin. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
+p3b <- ggplot(summarytab3ctmp, aes(x=Date, y=meanFluxCO2_L_umolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCO2_L_umolm2s-seFluxCO2_L_umolm2s, ymax=meanFluxCO2_L_umolm2s+seFluxCO2_L_umolm2s), alpha=0.5) + ylab("CO2 Flux (umol/m^2/s), Lin. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
 
 # CH4 by date (mean and se)
-p4b <- ggplot(summarytab4ctmp, aes(x=Date, y=meanFluxCH4_L_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCH4_L_nmolm2s-seFluxCH4_L_nmolm2s, ymax=meanFluxCH4_L_nmolm2s+seFluxCH4_L_nmolm2s), alpha=0.5) + ylab("CH4 Flux (nmol/m^2/s), Lin. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
+p4b <- ggplot(summarytab4ctmp, aes(x=Date, y=meanFluxCH4_L_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxCH4_L_nmolm2s-seFluxCH4_L_nmolm2s, ymax=meanFluxCH4_L_nmolm2s+seFluxCH4_L_nmolm2s), alpha=0.5) + ylab("CH4 Flux (nmol/m^2/s), Lin. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
 
 # N2O by date (mean and se)
-p5b <- ggplot(summarytab5ctmp, aes(x=Date, y=meanFluxN2O_L_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxN2O_L_nmolm2s-seFluxN2O_L_nmolm2s, ymax=meanFluxN2O_L_nmolm2s+seFluxN2O_L_nmolm2s), alpha=0.5) + ylab("N2O Flux (nmol/m^2/s), Lin. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2015-05-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
+p5b <- ggplot(summarytab5ctmp, aes(x=Date, y=meanFluxN2O_L_nmolm2s, color=Topo)) + geom_point() + geom_errorbar(aes(ymin=meanFluxN2O_L_nmolm2s-seFluxN2O_L_nmolm2s, ymax=meanFluxN2O_L_nmolm2s+seFluxN2O_L_nmolm2s), alpha=0.5) + ylab("N2O Flux (nmol/m^2/s), Lin. Fit\n(Mean +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%Y-%m-%d"), limits = ymd(c('2014-11-01','2016-01-20'))) + scale_colour_discrete(name="Topographic\nLocation") #+ geom_line()
 
 # save figures
 png(file = paste(pathsavefigs, "time_series_allpanels_linear.png", sep=""),width=10,height=22,units="in",res=400)
