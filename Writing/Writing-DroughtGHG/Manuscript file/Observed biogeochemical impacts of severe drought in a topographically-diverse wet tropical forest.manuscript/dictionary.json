@@ -1,0 +1,2007 @@
+{
+  "manuscript" : [
+    {
+      "_id" : "MPAffiliation:4A6044D5-B363-4C2B-A70B-922CB0D3EAD8",
+      "updatedAt" : 1454524043.045735,
+      "_rev" : "1-e301298b74ddae4bf2080fcb5a554d5e",
+      "objectType" : "MPAffiliation",
+      "createdAt" : 1454524043.045735
+    },
+    {
+      "updatedAt" : 1454523935.990347,
+      "objectType" : "MPAuxiliaryObjectReferenceStyle",
+      "_rev" : "1-4b3dae1278c882ce7c03a4670ce11ece",
+      "_id" : "MPAuxiliaryObjectReferenceStyle:2BB5F11D-2684-4D65-96D7-ACC30A67FC8B",
+      "priority" : 10,
+      "prototype" : "MPAuxiliaryObjectReferenceStyle:default",
+      "title" : "Default",
+      "locked" : true,
+      "bundled" : 0,
+      "embeddedReferenceStringComponents" : [
+        {
+          "bold" : true,
+          "_id" : "MPStyleableStringComponent:B8CF9955-0956-4114-AAC7-F9C6CC99688F",
+          "placeholderString" : "${kind} ${elementIndex}",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        }
+      ],
+      "createdAt" : 1447016919.101016,
+      "name" : "default"
+    },
+    {
+      "updatedAt" : 1454523936.005406,
+      "objectType" : "MPBorderStyle",
+      "_rev" : "1-c57998661fce8994c42429f797241615",
+      "_id" : "MPBorderStyle:8505AD49-F1CD-4B31-A2ED-62649BD2DD2E",
+      "priority" : 30,
+      "prototype" : "MPBorderStyle:00FD8810-B85D-4FC5-8C23-8022A36E07BD",
+      "title" : "Dotted",
+      "pattern" : [
+        1,
+        1
+      ],
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100867,
+      "name" : "dotted"
+    },
+    {
+      "updatedAt" : 1454523936.008687,
+      "objectType" : "MPBorderStyle",
+      "_rev" : "1-29b559010dd4b9dc19704f6619ff6adb",
+      "_id" : "MPBorderStyle:C12330FF-4898-42E1-8665-E353DDB4667B",
+      "priority" : 40,
+      "prototype" : "MPBorderStyle:16583262-A260-4E35-A508-3F960F70074F",
+      "title" : "Double Lines",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100872,
+      "doubleLines" : true,
+      "name" : "double"
+    },
+    {
+      "updatedAt" : 1454523936.011775,
+      "objectType" : "MPBorderStyle",
+      "_rev" : "1-0b1ab2324111534090888a8c47b96589",
+      "_id" : "MPBorderStyle:E2F3559F-63F2-47AE-B53C-2FC717CDD682",
+      "priority" : 20,
+      "prototype" : "MPBorderStyle:E28AA90C-4379-434F-AF58-E2D8C8ED1EB4",
+      "title" : "Dashed",
+      "pattern" : [
+        2,
+        2
+      ],
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100861,
+      "name" : "dashed"
+    },
+    {
+      "locked" : true,
+      "_id" : "MPBorderStyle:FCD6FC69-B490-4E27-BCE4-103678970989",
+      "objectType" : "MPBorderStyle",
+      "prototype" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+      "_rev" : "1-a3023ad80fd74670902852d32a0b8777",
+      "bundled" : 0,
+      "title" : "Solid",
+      "updatedAt" : 1454523936.015458,
+      "createdAt" : 1447016919.10085,
+      "priority" : 10,
+      "name" : "solid"
+    },
+    {
+      "updatedAt" : 1454523936.024277,
+      "figureTitleNumberingScheme" : "decimal",
+      "objectType" : "MPCaptionStyle",
+      "_rev" : "1-f20546bb4d956844f5b2a9fee54321e9",
+      "priority" : 10,
+      "_id" : "MPCaptionStyle:B98FDBFB-9257-4AC4-B33A-8F55F7D06A54",
+      "embeddedCaptionComponents" : [
+        {
+          "bold" : true,
+          "_id" : "MPStyleableStringComponent:E43EAFE4-7C81-468E-BF88-8CEF41435062",
+          "placeholderString" : "${kind} ${elementIndex}:",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        },
+        {
+          "editable" : true,
+          "bold" : false,
+          "_id" : "MPStyleableStringComponent:A6F4C1B4-597F-4206-A21A-4CA60F6C7A2E",
+          "placeholderString" : "${caption}",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        }
+      ],
+      "prototype" : "MPCaptionStyle:default",
+      "title" : "Default",
+      "locked" : true,
+      "bundled" : 0,
+      "embeddedFigureTitleComponents" : [
+        {
+          "bold" : true,
+          "_id" : "MPStyleableStringComponent:E5CB691A-EE39-41BD-8D78-22E02BD7782A",
+          "placeholderString" : "${figureIndex}. ",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        },
+        {
+          "editable" : true,
+          "bold" : false,
+          "_id" : "MPStyleableStringComponent:9E4DDC68-4667-49C8-9F3E-600E0258A53A",
+          "placeholderString" : "${title}",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        }
+      ],
+      "createdAt" : 1447016919.10101,
+      "name" : "default"
+    },
+    {
+      "_id" : "MPColor:071BDCED-C652-429D-B02B-9104E2A844A9",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:blue",
+      "_rev" : "1-b48f953763763e114ad7dc4a977cb588",
+      "bundled" : true,
+      "title" : "Blue",
+      "updatedAt" : 1454523936.066279,
+      "createdAt" : 1447016919.100919,
+      "priority" : 130,
+      "name" : "blue",
+      "value" : "#0000ff"
+    },
+    {
+      "updatedAt" : 1454523936.030615,
+      "objectType" : "MPColor",
+      "_rev" : "1-78f2297e562587edce4e88a07a885e91",
+      "_id" : "MPColor:0E767A78-F088-4BA7-9F31-18642CDED6B9",
+      "priority" : 10,
+      "prototype" : "MPColor:black",
+      "title" : "Black",
+      "value" : "#000000",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100881,
+      "name" : "black"
+    },
+    {
+      "_id" : "MPColor:0ED46470-29AD-452F-B7C5-C0B6E642E85D",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:gray",
+      "_rev" : "1-26a1df3d8c03f61d9afe1b476cb33fc7",
+      "bundled" : true,
+      "title" : "Gray",
+      "updatedAt" : 1454523936.066267,
+      "createdAt" : 1447016919.10089,
+      "priority" : 50,
+      "name" : "gray",
+      "value" : "#b0b0b0"
+    },
+    {
+      "_id" : "MPColor:213A6F5A-C909-42D7-BFB1-43FF1FA0D540",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:red",
+      "_rev" : "1-25a27d9de7ceecf5b76a8206e9977285",
+      "bundled" : true,
+      "title" : "Red",
+      "updatedAt" : 1454523936.066276,
+      "createdAt" : 1447016919.100911,
+      "priority" : 110,
+      "name" : "red",
+      "value" : "#ff0000"
+    },
+    {
+      "updatedAt" : 1454523936.047708,
+      "objectType" : "MPColor",
+      "_rev" : "1-2aa555105a10e542e76fbe3aae4768b4",
+      "_id" : "MPColor:27C6E7CD-74BA-4100-99A4-760AF181E972",
+      "priority" : 120,
+      "prototype" : "MPColor:green",
+      "title" : "Green",
+      "value" : "#00ff00",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100915,
+      "name" : "green"
+    },
+    {
+      "_id" : "MPColor:64DDB0AF-CAB1-4786-BF67-A8F7532D417E",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:verylightgray",
+      "_rev" : "1-af4686c7a8f4b5b2849969bef880e84c",
+      "bundled" : true,
+      "title" : "Very Light Gray",
+      "updatedAt" : 1454523936.06627,
+      "createdAt" : 1447016919.100894,
+      "priority" : 50,
+      "name" : "verylightgray",
+      "value" : "#f4f4f4"
+    },
+    {
+      "_id" : "MPColor:65F426C8-948F-48C8-8F54-D3FD420BC7C3",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:black",
+      "_rev" : "1-e44d44faf568dcdf82a6f33625f8bca0",
+      "bundled" : true,
+      "title" : "Black",
+      "updatedAt" : 1454523936.066261,
+      "createdAt" : 1447016919.100881,
+      "priority" : 10,
+      "name" : "black",
+      "value" : "#000000"
+    },
+    {
+      "_id" : "MPColor:6EDDF624-E8E3-40F2-ADDE-4CECF4F99864",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:white",
+      "_rev" : "1-6ed3ab310128d74308710158cb573a08",
+      "bundled" : true,
+      "title" : "White",
+      "updatedAt" : 1454523936.066274,
+      "createdAt" : 1447016919.100907,
+      "priority" : 100,
+      "name" : "white",
+      "value" : "#ffffff"
+    },
+    {
+      "updatedAt" : 1454523936.058988,
+      "objectType" : "MPColor",
+      "_rev" : "1-29ba501d68c051c32a7ce6f142029a09",
+      "_id" : "MPColor:89F58E85-6C71-447E-A91A-1228EE9B4CBD",
+      "priority" : 50,
+      "prototype" : "MPColor:verylightgray",
+      "title" : "Very Light Gray",
+      "value" : "#f4f4f4",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100894,
+      "name" : "verylightgray"
+    },
+    {
+      "_id" : "MPColor:8C9E321C-13DA-48B2-9325-DF7527105BC8",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:green",
+      "_rev" : "1-547af661dfe527477e4022be315da7db",
+      "bundled" : true,
+      "title" : "Green",
+      "updatedAt" : 1454523936.066277,
+      "createdAt" : 1447016919.100915,
+      "priority" : 120,
+      "name" : "green",
+      "value" : "#00ff00"
+    },
+    {
+      "updatedAt" : 1454523936.055792,
+      "objectType" : "MPColor",
+      "_rev" : "1-3f0f0f196ca0fddfb7691d646dde66c4",
+      "_id" : "MPColor:A4BD294C-2ED5-4323-A826-4C8EE1AD2FB1",
+      "priority" : 50,
+      "prototype" : "MPColor:verylightblue",
+      "title" : "Very Light Blue",
+      "value" : "#f0f0ff",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100903,
+      "name" : "verylightblue"
+    },
+    {
+      "_id" : "MPColor:B5BFE118-4ECF-4AC8-B554-404CE499CFAE",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:verylightblue",
+      "_rev" : "1-2e21f734082414b3698ba1b5032b6444",
+      "bundled" : true,
+      "title" : "Very Light Blue",
+      "updatedAt" : 1454523936.066272,
+      "createdAt" : 1447016919.100903,
+      "priority" : 50,
+      "name" : "verylightblue",
+      "value" : "#f0f0ff"
+    },
+    {
+      "updatedAt" : 1454523936.043529,
+      "objectType" : "MPColor",
+      "_rev" : "1-c72c6d119d9ac75cf176901941d8e07f",
+      "_id" : "MPColor:DBA2D800-2570-4E3C-B5C5-ADBAE39F5330",
+      "priority" : 50,
+      "prototype" : "MPColor:gray",
+      "title" : "Gray",
+      "value" : "#b0b0b0",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.10089,
+      "name" : "gray"
+    },
+    {
+      "updatedAt" : 1454523936.051559,
+      "objectType" : "MPColor",
+      "_rev" : "1-e58f3a63063e94daa95118d4b6b4deb9",
+      "_id" : "MPColor:E9192E46-8422-4DC2-9AD6-B960061BE19C",
+      "priority" : 110,
+      "prototype" : "MPColor:red",
+      "title" : "Red",
+      "value" : "#ff0000",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100911,
+      "name" : "red"
+    },
+    {
+      "updatedAt" : 1454523936.063095,
+      "objectType" : "MPColor",
+      "_rev" : "1-aeb0bbb1084f5f13c96f91a8622767d3",
+      "_id" : "MPColor:EBE27ECE-E78F-4ED9-B541-4176D35E53EF",
+      "priority" : 100,
+      "prototype" : "MPColor:white",
+      "title" : "White",
+      "value" : "#ffffff",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100907,
+      "name" : "white"
+    },
+    {
+      "updatedAt" : 1454523936.03562,
+      "objectType" : "MPColor",
+      "_rev" : "1-d52708b16e9283b5b76a208ff86e5de5",
+      "_id" : "MPColor:FB42429B-BFC7-42FD-8215-A529F38E6A1A",
+      "priority" : 130,
+      "prototype" : "MPColor:blue",
+      "title" : "Blue",
+      "value" : "#0000ff",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.100919,
+      "name" : "blue"
+    },
+    {
+      "colors" : [
+        "MPColor:65F426C8-948F-48C8-8F54-D3FD420BC7C3",
+        "MPColor:0ED46470-29AD-452F-B7C5-C0B6E642E85D",
+        "MPColor:64DDB0AF-CAB1-4786-BF67-A8F7532D417E",
+        "MPColor:B5BFE118-4ECF-4AC8-B554-404CE499CFAE",
+        "MPColor:6EDDF624-E8E3-40F2-ADDE-4CECF4F99864",
+        "MPColor:213A6F5A-C909-42D7-BFB1-43FF1FA0D540",
+        "MPColor:8C9E321C-13DA-48B2-9325-DF7527105BC8",
+        "MPColor:071BDCED-C652-429D-B02B-9104E2A844A9"
+      ],
+      "locked" : true,
+      "objectType" : "MPColorScheme",
+      "prototype" : "MPColorScheme:default",
+      "_id" : "MPColorScheme:C6689BBE-EE9B-47E9-92D9-CC1DC8DED3C8",
+      "bundled" : 0,
+      "_rev" : "1-fae7e6f3efca59674c7c7fc799f07be9",
+      "updatedAt" : 1454523936.070531,
+      "createdAt" : 1447016919.100924,
+      "name" : "Manuscripts default colour scheme"
+    },
+    {
+      "prename" : "Leilei",
+      "updatedAt" : 1454524923.656049,
+      "lastName" : "Ruan",
+      "firstName" : "Leilei",
+      "objectType" : "MPContributor",
+      "_rev" : "15-0e832d8b2b6d4360690066149e35ed06",
+      "priority" : 2,
+      "_id" : "MPContributor:17A5FB21-34CC-447D-8F2E-120A1CC2DF0F",
+      "affiliations" : [
+        "MPAffiliation:4A6044D5-B363-4C2B-A70B-922CB0D3EAD8"
+      ],
+      "middleNames" : "",
+      "role" : "author",
+      "createdAt" : 1454524887.94997,
+      "email" : "ruanleilei@berkeley.edu",
+      "nameString" : "[1] Ruan [4] Leilei "
+    },
+    {
+      "prename" : "Christine Sierra",
+      "updatedAt" : 1454524043.055768,
+      "lastName" : "O'Connell",
+      "firstName" : "Christine",
+      "objectType" : "MPContributor",
+      "_rev" : "25-2edfc465c251060e1c83fca46d2e0063",
+      "_id" : "MPContributor:D61EB2A7-989A-42A6-9F0E-052A23A2560D",
+      "affiliations" : [
+        "MPAffiliation:4A6044D5-B363-4C2B-A70B-922CB0D3EAD8"
+      ],
+      "fullName" : "Christine O'Connell",
+      "middleNames" : "Sierra",
+      "isCorresponding" : 1,
+      "role" : "author",
+      "createdAt" : 1454523953.494812,
+      "email" : "coconn@berkeley.edu",
+      "nameString" : "[1] O'Connell [4] Christine [5] Sierra "
+    },
+    {
+      "prename" : "Whendee",
+      "updatedAt" : 1454524923.658624,
+      "lastName" : "Silver",
+      "firstName" : "Whendee",
+      "objectType" : "MPContributor",
+      "_rev" : "19-27f94bc064f764387a11a19d01231779",
+      "priority" : 1,
+      "_id" : "MPContributor:EB6DBB9A-DE7B-4B4F-98D6-99129A292A82",
+      "affiliations" : [
+        "MPAffiliation:4A6044D5-B363-4C2B-A70B-922CB0D3EAD8"
+      ],
+      "middleNames" : "",
+      "role" : "author",
+      "createdAt" : 1454524150.163036,
+      "email" : "wsilver@berkeley.edu",
+      "nameString" : "[1] Silver [4] Whendee "
+    },
+    {
+      "updatedAt" : 1454523936.088136,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-1b188a0870a892ac01a9c158e25b0dcc",
+      "_id" : "MPFigureLayout:1CE0E1B9-F370-48C2-AF3F-ED56B041C763",
+      "priority" : 90,
+      "prototype" : "MPFigureLayout:nine_figures",
+      "title" : "Nine Figures (3×3)",
+      "columns" : 3,
+      "rows" : 3,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101052,
+      "name" : "nine_figures"
+    },
+    {
+      "updatedAt" : 1454523936.097993,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-5c9b844e21c22a8ada216143968970f8",
+      "_id" : "MPFigureLayout:1E8DC5ED-163D-48DC-9FAB-50CA36603097",
+      "priority" : 20,
+      "prototype" : "MPFigureLayout:two_figures",
+      "title" : "Two Figures Side by Side",
+      "columns" : 2,
+      "rows" : 1,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101032,
+      "name" : "two_figures"
+    },
+    {
+      "updatedAt" : 1454523936.091127,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-be5a3f4158415eaa75b0f987008550d2",
+      "_id" : "MPFigureLayout:5768CC51-CF7E-4C51-AD9E-98C439191DB5",
+      "priority" : 30,
+      "prototype" : "MPFigureLayout:three_figures",
+      "title" : "Three Figures in a Row",
+      "columns" : 3,
+      "rows" : 1,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101038,
+      "name" : "three_figures"
+    },
+    {
+      "updatedAt" : 1454523936.084264,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-13189ad1be6065f711ab5c4bb1d12c79",
+      "_id" : "MPFigureLayout:7B136570-C0FF-4BD7-A5EA-3DC73179DF0A",
+      "priority" : 40,
+      "prototype" : "MPFigureLayout:four_figures",
+      "title" : "Four figures (2×2)",
+      "columns" : 2,
+      "rows" : 2,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101043,
+      "name" : "four_figures"
+    },
+    {
+      "updatedAt" : 1454523936.081194,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-28a417e060624e988f1bfe37d72048c3",
+      "_id" : "MPFigureLayout:9ACBCC45-8093-4BC3-8E26-F11AD33CDEF8",
+      "priority" : 10,
+      "prototype" : "MPFigureLayout:default",
+      "title" : "Single Figure",
+      "columns" : 1,
+      "rows" : 1,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101025,
+      "name" : "default"
+    },
+    {
+      "updatedAt" : 1454523936.094112,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-dc017c4b9b365bcfa2b3d104ee3b6f33",
+      "_id" : "MPFigureLayout:B0309BCE-6DA2-415E-B981-1823EBFA96D8",
+      "priority" : 35,
+      "prototype" : "MPFigureLayout:three_figures_stacked",
+      "title" : "Three Figures Stacked",
+      "columns" : 1,
+      "rows" : 3,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101041,
+      "name" : "three_figures_stacked"
+    },
+    {
+      "updatedAt" : 1454523936.074556,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-af175d8f951587a9c7c987c2757c5abf",
+      "_id" : "MPFigureLayout:BBA9CDB2-025C-4777-B89F-6CC3E6D00423",
+      "priority" : 65,
+      "prototype" : "MPFigureLayout:2_by_3",
+      "title" : "Six Figures (2×3)",
+      "columns" : 2,
+      "rows" : 3,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101049,
+      "name" : "2_by_3"
+    },
+    {
+      "updatedAt" : 1454523936.07788,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-4b055ba7731c4dee249501901f41f68b",
+      "_id" : "MPFigureLayout:BD670803-B69F-4F27-937A-6951A7D92321",
+      "priority" : 60,
+      "prototype" : "MPFigureLayout:3_by_2",
+      "title" : "Six Figures (3×2)",
+      "columns" : 3,
+      "rows" : 2,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101046,
+      "name" : "3_by_2"
+    },
+    {
+      "updatedAt" : 1454523936.101394,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-42e86ff1085db0bd4eb89989d30b26cb",
+      "_id" : "MPFigureLayout:F569384B-A9DE-4D7C-B5D6-F0623E2F66E4",
+      "priority" : 25,
+      "prototype" : "MPFigureLayout:two_figures_stacked",
+      "title" : "Two Figures Stacked",
+      "columns" : 1,
+      "rows" : 2,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1447016919.101035,
+      "name" : "two_figures_stacked"
+    },
+    {
+      "innerSpacing" : 1,
+      "outerSpacing" : 0,
+      "updatedAt" : 1454523936.116586,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:1D66EC86-50A7-430B-A22F-EF025071C5D3",
+        "objectType" : "MPBorder",
+        "width" : 0
+      },
+      "priority" : 20,
+      "_id" : "MPFigureStyle:6069CB14-0D2F-4170-AD1C-BA7AC6AFFE88",
+      "prototype" : "MPFigureStyle:borderless-caption-below",
+      "title" : "Borderless, Caption Below",
+      "_rev" : "1-3ecd835fe54574c4a764603558897dec",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "below",
+      "createdAt" : 1447016919.10099,
+      "name" : "borderless_caption_below",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "updatedAt" : 1454523936.121859,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "objectType" : "MPBorder",
+        "width" : 0
+      },
+      "priority" : 10,
+      "_id" : "MPFigureStyle:9020EED4-6993-4D98-88D3-ED14563E944C",
+      "prototype" : "MPFigureStyle:default",
+      "title" : "Default",
+      "_rev" : "1-5ce57392e558d6252c286520a3eb012b",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "below",
+      "createdAt" : 1447016919.100983,
+      "name" : "default",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "updatedAt" : 1454523936.104836,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:617000AE-D9C8-498C-A4F3-A000CCD2DD72",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "priority" : 90,
+      "_id" : "MPFigureStyle:946F6EDC-2925-4D0A-8387-3A16D811B6C8",
+      "prototype" : "MPFigureStyle:bordered-caption-above",
+      "title" : "Bordered, Caption Above",
+      "_rev" : "1-c09616882ce612323370c1a069ccd86a",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "above",
+      "createdAt" : 1447016919.101005,
+      "name" : "bordered_caption_above",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "innerSpacing" : 1,
+      "updatedAt" : 1454523936.108445,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "_rev" : "1-f9c91ba8ab98d89a1ca4c55c74bc79f5",
+      "priority" : 30,
+      "_id" : "MPFigureStyle:AF4C0123-FC78-4FA5-8227-F4C62B89AB04",
+      "prototype" : "MPFigureStyle:bordered-caption-below",
+      "title" : "Bordered, Caption Below",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "below",
+      "createdAt" : 1447016919.100998,
+      "name" : "bordered_caption_below",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "updatedAt" : 1454523936.112312,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:617000AE-D9C8-498C-A4F3-A000CCD2DD72",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "priority" : 90,
+      "_id" : "MPFigureStyle:F7CCE2D4-2A32-42C4-9B45-E2EBA76F864F",
+      "prototype" : "MPFigureStyle:borderless-caption-above",
+      "title" : "Borderless, Caption Above",
+      "_rev" : "1-a705eb1cec09b08fe37ee7f7280fad8d",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "above",
+      "createdAt" : 1447016919.101002,
+      "name" : "borderless_caption_above",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "bundle" : "MPBundle:www-zotero-org-styles-harvard1",
+      "manuscriptType" : 1,
+      "objectType" : "MPManuscript",
+      "parent" : "MPManuscriptTemplate:www-zotero-org-styles-nature-geoscience",
+      "_id" : "MPManuscript:A12A68FF-E768-4C02-B17B-8039935BC4A1",
+      "collection" : "Manuscripts",
+      "title" : "Observed biogeochemical impacts of severe drought in a topographically-diverse wet tropical forest",
+      "_rev" : "4-333d9dccc6d3a9f99d2fc1d0ec6ee3c2",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523935.681302,
+      "updatedAt" : 1454525026.566217
+    },
+    {
+      "updatedAt" : 1454523936.127303,
+      "topMargin" : 20,
+      "objectType" : "MPPageLayout",
+      "defaultParagraphStyle" : "MPParagraphStyle:bodyText",
+      "_rev" : "1-2db4bf36aa4aefe11c1b7a4e07b392f9",
+      "_id" : "MPPageLayout:3617E63A-483B-474C-8168-03F75BFE934E",
+      "prototype" : "MPPageLayout:defaultA4",
+      "beginChaptersOnRightHandPages" : true,
+      "displayUnits" : "mm",
+      "leftMargin" : 20,
+      "locked" : true,
+      "bottomMargin" : 20,
+      "mirrorPagesHorizontally" : true,
+      "bundled" : 0,
+      "rightMargin" : 20,
+      "createdAt" : 1447016919.100828,
+      "embeddedNumberingStyle" : {
+        "_id" : "MPNumberingStyle:CB6FF724-7F91-454A-9A3C-30293471E039",
+        "prefix" : "[",
+        "objectType" : "MPNumberingStyle",
+        "startIndex" : 1,
+        "suffix" : "]",
+        "priority" : 99,
+        "numberingScheme" : "decimal"
+      },
+      "pageSize" : "a4"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Section Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:08E33F25-482E-4ABA-A0D2-0575BB3CBB5D",
+      "kind" : "heading",
+      "createdAt" : 1447016919.10095,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:2E2D93EB-2474-4494-AD92-B5EAD46A38BE",
+        "color" : "MPColor:black",
+        "fontSize" : 16,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "heading1",
+      "preferredXHTMLElement" : "h1",
+      "priority" : 20,
+      "topSpacing" : 8,
+      "updatedAt" : 1454523936.138252,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-46db864bae62f169113c5fa4a66c0c2f",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H1"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsubsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:2BF2FF4F-F038-4295-B192-EADE08143B0C",
+      "kind" : "heading",
+      "createdAt" : 1447016919.100965,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:6094A8B5-2751-489F-B4A5-699E54B57DC3",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "heading5",
+      "preferredXHTMLElement" : "h5",
+      "priority" : 24,
+      "topSpacing" : 8,
+      "updatedAt" : 1454523936.151452,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-4d0f9a0eeefa326ed3bd1fcd5533eff8",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H5"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:3069D852-90D5-4B8F-A9C3-DF200DB99AE4",
+      "kind" : "heading",
+      "createdAt" : 1447016919.100954,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:0A37ACFF-1D8A-4068-ABD0-0594C99C8EE0",
+        "color" : "MPColor:black",
+        "fontSize" : 14,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "heading2",
+      "preferredXHTMLElement" : "h2",
+      "priority" : 21,
+      "topSpacing" : 8,
+      "updatedAt" : 1454523936.141489,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-b76e6e3422cc49577fd0f0f68af87a82",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H2"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:3B226F4D-FF1B-4B38-9E21-44AFF801098B",
+      "kind" : "heading",
+      "createdAt" : 1447016919.100961,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:A3F0EF28-7A3F-4208-9205-5BD3FF8C1066",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "heading4",
+      "preferredXHTMLElement" : "h4",
+      "priority" : 23,
+      "topSpacing" : 8,
+      "updatedAt" : 1454523936.148275,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-51ff08cda9a1f65b837ab2f38b298531",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H4"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsubsubsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:5E2DF507-F7D7-466B-A477-83060A29B8D6",
+      "kind" : "heading",
+      "createdAt" : 1447016919.100969,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:5507294C-AD8D-48EC-B86A-A4E5AE6C34D5",
+        "color" : "MPColor:black",
+        "fontSize" : 10,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "heading6",
+      "preferredXHTMLElement" : "h6",
+      "priority" : 25,
+      "topSpacing" : 8,
+      "updatedAt" : 1454523936.154985,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-c9a7407d37ddb963f8031b67090c8ce3",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H6"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Manuscript Title",
+      "bottomSpacing" : 10,
+      "_id" : "MPParagraphStyle:6A53171C-FAC5-45B5-B844-EF943BDF0C11",
+      "kind" : "heading",
+      "createdAt" : 1447016919.100942,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:BBA06E82-F724-419F-A81E-1886644AA4B9",
+        "color" : "MPColor:black",
+        "fontSize" : 20,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "manuscriptTitle",
+      "preferredXHTMLElement" : "h1",
+      "priority" : 19,
+      "topSpacing" : 10,
+      "updatedAt" : 1454523936.159485,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-97fde08e7d6d68bfe12f6f19e3549327",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:manuscriptTitle"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:7EF77D30-77A6-4C81-9C21-E7BFD0EBDBDC",
+      "kind" : "heading",
+      "createdAt" : 1447016919.100958,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:055123F5-3704-49FE-B59B-D801598C67C4",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : true
+      },
+      "name" : "heading3",
+      "preferredXHTMLElement" : "h3",
+      "priority" : 22,
+      "topSpacing" : 8,
+      "updatedAt" : 1454523936.145086,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "1-a74051e53b993ec3640008c9183be854",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H3"
+    },
+    {
+      "firstLineIndent" : 0,
+      "embeddedListItemNumberingStyles" : {
+        "1" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:5A479546-C898-4C4B-9836-202EA34332A8",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        },
+        "2" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:BE16BD50-9F21-49A7-8F66-15011A3DBCEE",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        },
+        "3" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:5AC47239-EDA2-4314-8BE5-8A5399F379DF",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        }
+      },
+      "locked" : false,
+      "title" : "Body Text",
+      "bottomSpacing" : 10,
+      "listTailIndent" : 0,
+      "_id" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "kind" : "body",
+      "createdAt" : 1447016919.100973,
+      "bundled" : 0,
+      "hideListNumberingSuffixForLastLevel" : true,
+      "hierarchicalListNumbering" : false,
+      "name" : "bodyText",
+      "preferredXHTMLElement" : "p",
+      "priority" : 10,
+      "textStyling" : {
+        "_id" : "MPTextStyling:A6E169AC-4610-44C6-A979-7FD95AE787CC",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Times New Roman",
+        "bold" : false
+      },
+      "lineSpacing" : 2,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "topSpacing" : 10,
+      "listItemIndentPerLevel" : 30,
+      "updatedAt" : 1454539282.566697,
+      "headIndent" : 0,
+      "_rev" : "3-4d840db4e459d21b768a1e635de517fc",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "listHeadIndent" : 30,
+      "embeddedListItemBulletStyles" : {
+        "1" : {
+          "_id" : "MPListItemBulletStyle:0E9110F4-8426-4B66-B97A-9053CFC9C77A",
+          "bulletStyle" : "disc",
+          "objectType" : "MPListItemBulletStyle"
+        },
+        "2" : {
+          "_id" : "MPListItemBulletStyle:1066DC6B-704F-4CA0-B807-72F461F5E0BA",
+          "bulletStyle" : "circle",
+          "objectType" : "MPListItemBulletStyle"
+        }
+      },
+      "prototype" : "MPParagraphStyle:bodyText"
+    },
+    {
+      "headerTopBorder" : {
+        "_id" : "MPBorder:6BC92907-B7DF-4542-84CF-1456246EFEA9",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 2,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "locked" : true,
+      "title" : "Default Table Style",
+      "bodyColumnSeparatorBorder" : {
+        "_id" : "MPBorder:EBB5D0B3-A9FE-49B3-ADAD-2CC5851D91F9",
+        "style" : "MPBorderStyle:00FD8810-B85D-4FC5-8C23-8022A36E07BD",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "footerBottomBorder" : {
+        "_id" : "MPBorder:EC933CA4-ABBB-49D0-A2EF-4B0B2D1DA786",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "footerBackgroundColor" : "MPColor:white",
+      "footerTopSpacing" : 3,
+      "_id" : "MPTableStyle:C09C60A4-A6CD-4AB3-BA35-BA052B29CF07",
+      "bodyBackgroundAlternateColor" : "MPColor:white",
+      "bundled" : 0,
+      "createdAt" : 1447016919.100932,
+      "headerBottomBorder" : {
+        "_id" : "MPBorder:EB6A90B8-E464-4016-A6E7-90F704EC63C2",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "name" : "default",
+      "priority" : 10,
+      "updatedAt" : 1454523936.163774,
+      "bodyBackgroundColor" : "MPColor:white",
+      "headerBottomSpacing" : 3,
+      "_rev" : "1-3b70dc482891e493ff6f410cb98ac7b4",
+      "footerTopBorder" : {
+        "_id" : "MPBorder:2338AB83-D20B-4118-8C38-D0F330E85F23",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "objectType" : "MPTableStyle",
+      "prototype" : "MPTableStyle:default",
+      "headerBackgroundColor" : "MPColor:verylightgray"
+    }
+  ],
+  "annotations" : [
+
+  ],
+  "bibliography" : [
+    {
+      "issued" : {
+        "_id" : "MPBibliographicDate:0462BC66-8C83-4428-9B42-D5C84EABE8A2",
+        "objectType" : "MPBibliographicDate",
+        "date-parts" : [
+          [
+            1999,
+            1,
+            1
+          ]
+        ]
+      },
+      "updatedAt" : 1454539808.62885,
+      "citation-label" : "079EE414-CB3E-440F-B9A0-74B93F1E58CE",
+      "sourceIdentifier" : "com.mekentosj.papers.citations.xml",
+      "author" : [
+        {
+          "given" : "W L",
+          "_id" : "MPBibliographicName:273BE31B-9857-4577-BE16-C0CD53A07E73",
+          "objectType" : "MPBibliographicName",
+          "family" : "Silver"
+        },
+        {
+          "given" : "A E",
+          "_id" : "MPBibliographicName:4C1F8F1C-6F22-4BED-A903-FF63EE8806BE",
+          "objectType" : "MPBibliographicName",
+          "family" : "Lugo"
+        },
+        {
+          "given" : "M",
+          "_id" : "MPBibliographicName:757B2196-4993-4E54-8353-98A0307D9E96",
+          "objectType" : "MPBibliographicName",
+          "family" : "Keller"
+        }
+      ],
+      "objectType" : "MPBibliographyItem",
+      "originalIdentifier" : "079EE414-CB3E-440F-B9A0-74B93F1E58CE",
+      "sourceUTI" : "com.mekentosj.citations.xml",
+      "URL" : "http:\/\/link.springer.com\/article\/10.1007\/BF00996995",
+      "_id" : "MPBibliographyItem:0F2F5116-0F87-40C3-A723-11BCA8E21135",
+      "title" : "Soil oxygen availability and biogeochemistry along rainfall and topographic gradients in upland wet tropical forest soils",
+      "_rev" : "1-99408ed0f2c96e4083c006365286613b",
+      "_attachments" : {
+        "originalData" : {
+          "stub" : true,
+          "length" : 859,
+          "digest" : "sha1-Lflc4ZoFflbXkbcA0fVY+u3ewq8=",
+          "revpos" : 1,
+          "content_type" : "application\/x-papers-citation-json"
+        }
+      },
+      "number" : 0,
+      "container-title" : "Biogeochemistry",
+      "createdAt" : 1454539808.62885,
+      "embeddedAuthors" : [
+
+      ]
+    },
+    {
+      "page-first" : "576",
+      "title" : "When Wet Gets Wetter: Decoupling of Moisture, Redox Biogeochemistry, and Greenhouse Gas Fluxes in a Humid Tropical Forest Soil",
+      "volume" : "16",
+      "_id" : "MPBibliographyItem:11A99A8F-AAEA-46BE-A2AD-BED0AEE51398",
+      "citation-label" : "DCB2A446-EB8D-43CE-8CBC-CA5DD63AFB87",
+      "createdAt" : 1454539808.650695,
+      "issued" : {
+        "_id" : "MPBibliographicDate:265D7ACC-ACEF-4612-886E-E38700ACCD9E",
+        "objectType" : "MPBibliographicDate",
+        "date-parts" : [
+          [
+            2012,
+            12,
+            22
+          ]
+        ]
+      },
+      "originalIdentifier" : "DCB2A446-EB8D-43CE-8CBC-CA5DD63AFB87",
+      "DOI" : "10.1007\/s10021-012-9631-2",
+      "updatedAt" : 1454539808.650695,
+      "_attachments" : {
+        "originalData" : {
+          "stub" : true,
+          "length" : 1087,
+          "digest" : "sha1-BSMnrLocp1WwIv3tbWV8vqN\/bWg=",
+          "revpos" : 1,
+          "content_type" : "application\/x-papers-citation-json"
+        }
+      },
+      "number" : 4,
+      "embeddedAuthors" : [
+
+      ],
+      "sourceIdentifier" : "com.mekentosj.papers.citations.xml",
+      "sourceUTI" : "com.mekentosj.citations.xml",
+      "number-of-pages" : 13,
+      "container-title" : "Ecosystems",
+      "_rev" : "1-8d012bff3725f2ac8a69e051072366c2",
+      "objectType" : "MPBibliographyItem",
+      "URL" : "http:\/\/link.springer.com\/10.1007\/s10021-012-9631-2",
+      "issue" : 4,
+      "author" : [
+        {
+          "given" : "Steven J",
+          "_id" : "MPBibliographicName:B91E8BD8-FC08-4424-88FC-62AB3390E50E",
+          "objectType" : "MPBibliographicName",
+          "family" : "Hall"
+        },
+        {
+          "given" : "William H",
+          "_id" : "MPBibliographicName:248C027A-8EFB-4ACD-A453-55B59F7C9036",
+          "objectType" : "MPBibliographicName",
+          "family" : "McDowell"
+        },
+        {
+          "given" : "Whendee L",
+          "_id" : "MPBibliographicName:580B2672-BC48-4C18-8235-7C48CE0695F5",
+          "objectType" : "MPBibliographicName",
+          "family" : "Silver"
+        }
+      ]
+    },
+    {
+      "page-first" : "1",
+      "title" : "Differential effects of canopy trimming and litter deposition on litterfall and nutrient dynamics in a wet subtropical forest",
+      "_id" : "MPBibliographyItem:457DA9D2-0CF2-4174-B313-0624DA2E48A0",
+      "citation-label" : "7B64A1AC-D54E-4EA4-AFEC-3F986B20E961",
+      "createdAt" : 1454539808.656774,
+      "issued" : {
+        "_id" : "MPBibliographicDate:54312F9F-FB57-4055-927D-87569EFEDFDA",
+        "objectType" : "MPBibliographicDate",
+        "date-parts" : [
+          [
+            2014,
+            6,
+            9
+          ]
+        ]
+      },
+      "originalIdentifier" : "7B64A1AC-D54E-4EA4-AFEC-3F986B20E961",
+      "DOI" : "10.1016\/j.foreco.2014.05.018",
+      "updatedAt" : 1454539808.656774,
+      "_attachments" : {
+        "originalData" : {
+          "stub" : true,
+          "length" : 1071,
+          "digest" : "sha1-LbelYGJygm8vQmnwQ2N5vjS0JjE=",
+          "revpos" : 1,
+          "content_type" : "application\/x-papers-citation-json"
+        }
+      },
+      "number" : 0,
+      "embeddedAuthors" : [
+
+      ],
+      "sourceIdentifier" : "com.mekentosj.papers.citations.xml",
+      "sourceUTI" : "com.mekentosj.citations.xml",
+      "number-of-pages" : 8,
+      "container-title" : "Forest Ecology and Management",
+      "_rev" : "1-0813e53c3e6eddd2a4be61b5795c0d8c",
+      "objectType" : "MPBibliographyItem",
+      "URL" : "http:\/\/dx.doi.org\/10.1016\/j.foreco.2014.05.018",
+      "author" : [
+        {
+          "given" : "Whendee L",
+          "_id" : "MPBibliographicName:2C55BF50-8D60-40A0-8D7D-B0F23D2DF9D1",
+          "objectType" : "MPBibliographicName",
+          "family" : "Silver"
+        },
+        {
+          "given" : "Steven J",
+          "_id" : "MPBibliographicName:165D3D22-8EE8-4533-B2DF-4E28800D2886",
+          "objectType" : "MPBibliographicName",
+          "family" : "Hall"
+        },
+        {
+          "given" : "Grizelle",
+          "_id" : "MPBibliographicName:85056403-6DB7-4EB2-AD13-7D9513A3EFB1",
+          "objectType" : "MPBibliographicName",
+          "family" : "González"
+        }
+      ]
+    },
+    {
+      "_id" : "MPCitation:10AFE212-54BC-49A0-B5F5-6BEBEF122605",
+      "containingElement" : "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15",
+      "embeddedCitationItems" : [
+        {
+          "_id" : "MPCitationItem:284B800E-57F3-480F-A590-0CF40ADE255E",
+          "objectType" : "MPCitationItem",
+          "bibliographyItem" : "MPBibliographyItem:0F2F5116-0F87-40C3-A723-11BCA8E21135"
+        },
+        {
+          "_id" : "MPCitationItem:4EC26E03-6752-44E2-A167-2E8BEED95B44",
+          "objectType" : "MPCitationItem",
+          "bibliographyItem" : "MPBibliographyItem:11A99A8F-AAEA-46BE-A2AD-BED0AEE51398"
+        },
+        {
+          "_id" : "MPCitationItem:34176DBC-5CEB-471E-8FBA-C419AD37B930",
+          "objectType" : "MPCitationItem",
+          "bibliographyItem" : "MPBibliographyItem:457DA9D2-0CF2-4174-B313-0624DA2E48A0"
+        }
+      ],
+      "objectType" : "MPCitation",
+      "_rev" : "1-8fd3c32c7d3d53af4c848a2e32c0ad5c",
+      "collationType" : 0,
+      "createdAt" : 1454539808.667654,
+      "updatedAt" : 1454539808.667654
+    }
+  ],
+  "sections" : [
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454525353.487167,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:0116433E-72BA-4379-9C56-FE38A7120F72",
+      "objectType" : "MPContentSummary",
+      "_rev" : "4-2a2162564a880385968039caaaaaae81",
+      "_id" : "MPContentSummary:08458A75-CD86-493D-B1EB-091B5D47D0C1",
+      "elementWordCounts" : {
+        "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC" : 0
+      },
+      "titleWordCount" : 4,
+      "createdAt" : 1454525303.291098,
+      "titleCharacterCount" : 26
+    },
+    {
+      "_id" : "MPContentSummary:1022AB80-77B9-42A1-88CD-F843BDBA71AA",
+      "contentWordCount" : 0,
+      "contentParagraphCount" : 0,
+      "artefact" : "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49",
+      "objectType" : "MPContentSummary",
+      "titleCharacterCount" : 28,
+      "_rev" : "5-e67716a1f3829b1210a66b4c1bb015c6",
+      "titleWordCount" : 5,
+      "createdAt" : 1454525364.14285,
+      "updatedAt" : 1454525476.927977
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1454539928.970245,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06" : 123,
+        "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21" : 148,
+        "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9" : 1468,
+        "MPParagraphElement:8BB1D3F7-4972-4EB5-F631-5F085D33CF4E" : 96,
+        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE" : 0,
+        "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E" : 0,
+        "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA" : 0,
+        "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15" : 485
+      },
+      "contentWordCount" : 362,
+      "artefact" : "MPSection:69DB1203-51C9-41C8-8252-6A5D5D1F250E",
+      "objectType" : "MPContentSummary",
+      "_rev" : "38-cc28e5cd4f00614313d00271337fed5a",
+      "_id" : "MPContentSummary:14E79159-A832-4F4D-B701-F58370011C0A",
+      "elementWordCounts" : {
+        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06" : 22,
+        "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21" : 23,
+        "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9" : 235,
+        "MPParagraphElement:8BB1D3F7-4972-4EB5-F631-5F085D33CF4E" : 18,
+        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE" : 0,
+        "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E" : 0,
+        "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA" : 0,
+        "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15" : 82
+      },
+      "titleWordCount" : 5,
+      "createdAt" : 1454525087.130966,
+      "titleCharacterCount" : 35
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454525476.299199,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:C36FFD0A-1759-44ED-D5FF-20B6AEAE7CA1",
+      "objectType" : "MPContentSummary",
+      "_rev" : "5-029fa43e205acf9ac0c10c0bf5662203",
+      "_id" : "MPContentSummary:163C5D3D-2A2A-4FD1-86A0-22439EB5A21C",
+      "elementWordCounts" : {
+        "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1454525458.8008,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454523938.939206,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:7330191A-212F-4B92-A90D-B1C6177992D1" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:123BAE1D-3CF1-4774-AD21-E28AA368A97B",
+      "objectType" : "MPContentSummary",
+      "_rev" : "2-83604e55f011cea82397591686b6f15f",
+      "_id" : "MPContentSummary:2464C34E-E5B8-4419-9CCF-DF3B21ED0896",
+      "elementWordCounts" : {
+        "MPParagraphElement:7330191A-212F-4B92-A90D-B1C6177992D1" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1454523936.515353,
+      "titleCharacterCount" : 10
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454525345.322232,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:69A44E72-2F07-418C-88D4-BCD755DF1D98",
+      "objectType" : "MPContentSummary",
+      "_rev" : "3-ab3d5d5b826b0326f491393b1462ac31",
+      "_id" : "MPContentSummary:28C9AF8E-AFD6-43F7-A4F1-4A3C73B6FF88",
+      "elementWordCounts" : {
+        "MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1454523936.461619,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454523938.92103,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:3861AAEB-5AC4-4F80-BC78-CAB77A2622AE" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:420F76A4-9C64-40B7-B908-5C971FE20068",
+      "objectType" : "MPContentSummary",
+      "_rev" : "2-e521fb5e14f06dac885e7696fcb13479",
+      "_id" : "MPContentSummary:4D49E049-E417-4747-AF3B-21D90542B5A5",
+      "elementWordCounts" : {
+        "MPParagraphElement:3861AAEB-5AC4-4F80-BC78-CAB77A2622AE" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1454523936.489207,
+      "titleCharacterCount" : 10
+    },
+    {
+      "contentParagraphCount" : 0,
+      "updatedAt" : 1454525488.168857,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:159B71F8-2EE0-4D5F-98FA-74B93795CDA2" : 0,
+        "MPParagraphElement:DD499D24-0117-43DB-AE9F-AEA770BB0462" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+      "objectType" : "MPContentSummary",
+      "_rev" : "6-ca9a48891a00b0ec9f060cdaadb374e6",
+      "_id" : "MPContentSummary:7ADC0775-8D7F-49F6-BF36-56A7A0643109",
+      "elementWordCounts" : {
+        "MPParagraphElement:159B71F8-2EE0-4D5F-98FA-74B93795CDA2" : 0,
+        "MPParagraphElement:DD499D24-0117-43DB-AE9F-AEA770BB0462" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1454523936.430363,
+      "titleCharacterCount" : 7
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454523938.870701,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:3E4D549C-F779-4491-8430-6C45C33932A2" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:DF913CFC-52B6-432A-8201-ECEA962CAB50",
+      "objectType" : "MPContentSummary",
+      "_rev" : "2-f6190d1c7f2a1f72625ea5034c3e1df2",
+      "_id" : "MPContentSummary:8301481F-B787-4047-A1D5-7BA43ADA6347",
+      "elementWordCounts" : {
+        "MPParagraphElement:3E4D549C-F779-4491-8430-6C45C33932A2" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1454523936.397995,
+      "titleCharacterCount" : 12
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454525476.309892,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:E21DDAB2-70DE-445A-F467-16C28BCD3755",
+      "objectType" : "MPContentSummary",
+      "_rev" : "5-f340953089c670a51b85aafe6a77d4fa",
+      "_id" : "MPContentSummary:876A388B-D545-47E2-A3DE-A3E306A2793A",
+      "elementWordCounts" : {
+        "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636" : 0
+      },
+      "titleWordCount" : 7,
+      "createdAt" : 1454525439.120936,
+      "titleCharacterCount" : 44
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1454523938.812284,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:3A8723BA-C5C2-4DAF-BE45-58CBB246CE3A" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:A12BC554-A5AC-4029-A73F-48E620710CD2",
+      "objectType" : "MPContentSummary",
+      "_rev" : "2-7ceea9a1cce8a6d78fda4c5d66cec364",
+      "_id" : "MPContentSummary:A4B713F9-AB1F-48D5-966A-C22B2BC4C750",
+      "elementWordCounts" : {
+        "MPParagraphElement:3A8723BA-C5C2-4DAF-BE45-58CBB246CE3A" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1454523936.209286,
+      "titleCharacterCount" : 8
+    },
+    {
+      "_id" : "MPContentSummary:A895DF52-88F3-42AD-8E25-97FEA482A655",
+      "contentWordCount" : 0,
+      "contentParagraphCount" : 0,
+      "artefact" : "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01",
+      "objectType" : "MPContentSummary",
+      "titleCharacterCount" : 49,
+      "_rev" : "5-56113b64287c7cb5473b1311a6c4f265",
+      "titleWordCount" : 7,
+      "createdAt" : 1454525321.866764,
+      "updatedAt" : 1454525393.25298
+    },
+    {
+      "_id" : "MPContentSummary:F2546A9C-BC4B-457B-AC2C-293DCD0B3B83",
+      "contentWordCount" : 0,
+      "contentParagraphCount" : 0,
+      "artefact" : "MPSection:942C305B-9AD3-42D4-8B97-050823A23785",
+      "objectType" : "MPContentSummary",
+      "titleCharacterCount" : 0,
+      "_rev" : "1-c0b0428142a816a29483dc2620a1549a",
+      "titleWordCount" : 0,
+      "createdAt" : 1454525371.452768,
+      "updatedAt" : 1454525371.452768
+    },
+    {
+      "_id" : "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "elementType" : "p",
+      "objectType" : "MPParagraphElement",
+      "id" : "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3",
+      "collection" : "elements",
+      "contents" : "<p id=\"MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525469,
+      "_rev" : "2-b17adc03a5d3d3c000a0b8aadc6d176b"
+    },
+    {
+      "_id" : "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "elementType" : "p",
+      "objectType" : "MPParagraphElement",
+      "id" : "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636",
+      "collection" : "elements",
+      "contents" : "<p id=\"MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525467,
+      "_rev" : "2-751d8d421c56e867ddb44d5684b78d9a"
+    },
+    {
+      "_id" : "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "elementType" : "p",
+      "objectType" : "MPParagraphElement",
+      "id" : "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC",
+      "collection" : "elements",
+      "contents" : "<p id=\"MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525308,
+      "_rev" : "2-8333bf69ae92d500ceaa1d677074bccc"
+    },
+    {
+      "_id" : "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "contents" : "<p id=\"MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454539419,
+      "_rev" : "1-a99e216068f2b974434bd7aa6a6230dc"
+    },
+    {
+      "_id" : "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "elementType" : "p",
+      "objectType" : "MPParagraphElement",
+      "id" : "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21",
+      "_rev" : "2-ec9da16a414c10b32cc28ac45213a7d6",
+      "contents" : "<p id=\"MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\">The LEF contains approximately 11,500 ha of contiguous forest area, spanning an elevation gradient from approximately 350 to 1075 m above sea level.<\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454539419,
+      "collection" : "elements"
+    },
+    {
+      "_id" : "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "contents" : "<p id=\"MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454539878,
+      "_rev" : "1-0ef1d8b90a53cc3d93bf5208c8e92da0"
+    },
+    {
+      "_id" : "MPParagraphElement:3861AAEB-5AC4-4F80-BC78-CAB77A2622AE",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Section contents",
+      "_rev" : "1-3202e4b6c1ce240a16929b1cd97bed01",
+      "contents" : "<p id=\"MPParagraphElement:3861AAEB-5AC4-4F80-BC78-CAB77A2622AE\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.495272,
+      "updatedAt" : 1454523936.495272
+    },
+    {
+      "_id" : "MPParagraphElement:3A8723BA-C5C2-4DAF-BE45-58CBB246CE3A",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Section contents",
+      "_rev" : "1-fbaba1469053b9c53e1a466f82d0a873",
+      "contents" : "<p id=\"MPParagraphElement:3A8723BA-C5C2-4DAF-BE45-58CBB246CE3A\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.260541,
+      "updatedAt" : 1454523936.260541
+    },
+    {
+      "_id" : "MPParagraphElement:3E4D549C-F779-4491-8430-6C45C33932A2",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Section contents",
+      "_rev" : "1-a6947097a34a475220b5a4d4c5ccc172",
+      "contents" : "<p id=\"MPParagraphElement:3E4D549C-F779-4491-8430-6C45C33932A2\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.405381,
+      "updatedAt" : 1454523936.405381
+    },
+    {
+      "_id" : "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Subsection contents",
+      "_rev" : "50-134239f12a17ab74e7bd466eaade0d35",
+      "contents" : "<p id=\"MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\" data-placeholder-text=\"Subsection contents\">Research was conducted in the Luquillo Experimental Forest (LEF), Puerto Rico, USA (18 18’ N, 65° 50’ W). The forest is congruent with El Yunque National Forest managed by the US Forest Service.  Field measurements were made at El Verde Research Station, a site well characterized as part of the on-going Luquillo Long-Term Ecological Research (LUQ) and the Luquillo Critical Zone Observatory (LCZO) projects based in the LEF <span class=\"citation\" data-reference-id=\"MPCitation:10AFE212-54BC-49A0-B5F5-6BEBEF122605\">(Hall et al. 2012; Silver et al. 1999; Silver et al. 2014)<\/span>.<\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525120.286253,
+      "updatedAt" : 1454539525.005681,
+      "collection" : "elements"
+    },
+    {
+      "_id" : "MPParagraphElement:51F08CB0-619D-46E1-D99F-CAE12204F327",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:51F08CB0-619D-46E1-D99F-CAE12204F327",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "contents" : "<p id=\"MPParagraphElement:51F08CB0-619D-46E1-D99F-CAE12204F327\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525476,
+      "_rev" : "1-dbb49fccc865db921db8db1b0546598b"
+    },
+    {
+      "_id" : "MPParagraphElement:7330191A-212F-4B92-A90D-B1C6177992D1",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Section contents",
+      "_rev" : "1-3e3057fd6e63c82532cc579d014eca4b",
+      "contents" : "<p id=\"MPParagraphElement:7330191A-212F-4B92-A90D-B1C6177992D1\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.521345,
+      "updatedAt" : 1454523936.521345
+    },
+    {
+      "_id" : "MPParagraphElement:7CD2B88A-97A7-4BBE-A53D-BCAEC9009EA6",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Subsection contents",
+      "_rev" : "1-0fcaa403e319a45fba6401bf1110b8b5",
+      "contents" : "<p id=\"MPParagraphElement:7CD2B88A-97A7-4BBE-A53D-BCAEC9009EA6\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "43468236-ABB2-4821-82B2-D7B76EB58702",
+      "createdAt" : 1454525147.447004,
+      "updatedAt" : 1454525147.447004
+    },
+    {
+      "_id" : "MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "placeholderInnerHTML" : "Section contents",
+      "_rev" : "1-858d0c2f46387f5d4d5db4eeca78d9e0",
+      "contents" : "<p id=\"MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.469019,
+      "updatedAt" : 1454523936.469019
+    },
+    {
+      "_id" : "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "contents" : "<p id=\"MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">We will make use of a range of environmental conditions present in the LEF to compare and contrast bedrock types (volcanoclastic and dioritic), topographic zones (ridge, slope, upland valley, riparian valley) and precipitation regimes (windward to leeward, lower and upper elevation). These sites have all been well characterized as part of the on-going LTER and the LCZO projects based on the LEF (Scatena 1989, Silver et al. 1999, Liptzin et al. 2011, Hall et al. 2012, Wood and Silver 2012). Soils in the LEF are derived from volcanoclastic sediments with quartz diorite intrusions (Beinroth 1982). Soils are predominantly classified as Ultisols and Oxisols (Scatena 1989, USDA NRCS 2002). Mean monthly temperatures range from 23.5ºC in January to 27ºC in September at low elevation, and from 17 to 20ºC in the upper elevations. Precipitation ranges from less than 3000 mm y <sup>-1<\/sup> in the low elevations and leeward sites to approximately 5000 mm y <sup>-1<\/sup> near the uppermost elevation and windward locations. The forest can be classified into four life zones based on the Holdridge Life Zone System: subtropical wet and subtropical rain forests are found at low and mid elevations, lower montane rain and lower montane wet forests at high elevations (Brown et al. 1983). These life zones correspond to four dominant vegetation communities that decrease in species richness (Barone et al. 2008), stature, NPP, and aboveground biomass with elevation (Weaver and Murphy 1990).<\/p>",
+      "sessionID" : "74CD5F45-15DC-47CD-B1B3-2712B6B67749",
+      "createdAt" : 1454539169,
+      "_rev" : "2-cf8cc0683551d3cac1520ae18aeb289b",
+      "updatedAt" : 1454539405.354363
+    },
+    {
+      "_id" : "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "elementType" : "p",
+      "objectType" : "MPParagraphElement",
+      "id" : "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE",
+      "collection" : "elements",
+      "contents" : "<p id=\"MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454539568,
+      "_rev" : "3-656e35690ce7b236c1b6e59483b94af3"
+    },
+    {
+      "_id" : "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "elementType" : "p",
+      "objectType" : "MPParagraphElement",
+      "id" : "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06",
+      "collection" : "elements",
+      "contents" : "<p id=\"MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\">things to consider citing: (Scatena 1989, Silver et al. 1999, Liptzin et al. 2011, Hall et al. 2012, Wood and Silver 2012).<\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454539878,
+      "_rev" : "3-8bb9c1c6d04e1d3b427f4a505faf04cd"
+    },
+    {
+      "_id" : "MPParagraphElement:DC01319A-5BEB-4D0C-9FF8-60A71B6B3B17",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:DC01319A-5BEB-4D0C-9FF8-60A71B6B3B17",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "contents" : "<p id=\"MPParagraphElement:DC01319A-5BEB-4D0C-9FF8-60A71B6B3B17\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525393,
+      "_rev" : "1-bcf59a22138887e10fce2c6cb6b0a95e"
+    },
+    {
+      "_id" : "MPSection:0116433E-72BA-4379-9C56-FE38A7120F72",
+      "objectType" : "MPSection",
+      "id" : "MPSection:0116433E-72BA-4379-9C56-FE38A7120F72",
+      "_rev" : "9-bd7002453cf6bdf9595b28e85e39cf00",
+      "title" : "<i>Experimental design<\/i>",
+      "elementIDs" : [
+        "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC"
+      ],
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:0116433E-72BA-4379-9C56-FE38A7120F72"
+      ],
+      "priority" : 4,
+      "createdAt" : 1454525303
+    },
+    {
+      "_id" : "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01",
+      "objectType" : "MPSection",
+      "id" : "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01",
+      "_rev" : "8-6f47d71b85a7099ec6a269376a232c7b",
+      "title" : "<i>Moisture, Oxygen and Rainfall Measurements<\/i>",
+      "elementIDs" : [
+        "MPParagraphElement:DC01319A-5BEB-4D0C-9FF8-60A71B6B3B17"
+      ],
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01"
+      ],
+      "priority" : 5,
+      "createdAt" : 1454525321
+    },
+    {
+      "category" : "MPSectionCategory:abstract",
+      "_id" : "MPSection:123BAE1D-3CF1-4774-AD21-E28AA368A97B",
+      "objectType" : "MPSection",
+      "_rev" : "2-7532a5e7f84714628dcc2e46391aa8d1",
+      "elementIDs" : [
+        "MPParagraphElement:7330191A-212F-4B92-A90D-B1C6177992D1"
+      ],
+      "title" : "Conclusion",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.512583,
+      "path" : [
+        "MPSection:123BAE1D-3CF1-4774-AD21-E28AA368A97B"
+      ],
+      "priority" : 5,
+      "updatedAt" : 1454523936.523283
+    },
+    {
+      "_id" : "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49",
+      "objectType" : "MPSection",
+      "id" : "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49",
+      "_rev" : "10-df9784d824fbadeb9f764f38f18a9360",
+      "title" : "<i>Gas flux measurements<\/i>",
+      "elementIDs" : [
+        "MPParagraphElement:51F08CB0-619D-46E1-D99F-CAE12204F327"
+      ],
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49"
+      ],
+      "priority" : 6,
+      "createdAt" : 1454525364
+    },
+    {
+      "category" : "MPSectionCategory:abstract",
+      "_id" : "MPSection:420F76A4-9C64-40B7-B908-5C971FE20068",
+      "objectType" : "MPSection",
+      "_rev" : "2-953046dd84fa901dc346e610dafa393e",
+      "elementIDs" : [
+        "MPParagraphElement:3861AAEB-5AC4-4F80-BC78-CAB77A2622AE"
+      ],
+      "title" : "Discussion",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.485894,
+      "path" : [
+        "MPSection:420F76A4-9C64-40B7-B908-5C971FE20068"
+      ],
+      "priority" : 4,
+      "updatedAt" : 1454523936.497091
+    },
+    {
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "category" : "MPSectionCategory:abstract",
+      "updatedAt" : 1454525299.283826,
+      "objectType" : "MPSection",
+      "_rev" : "6-d84fcc67039c2ac5d8dead40040b50fd",
+      "_id" : "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B"
+      ],
+      "title" : "Methods",
+      "priority" : 2,
+      "createdAt" : 1454523936.425802,
+      "elementIDs" : [
+
+      ],
+      "collection" : "sections"
+    },
+    {
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "category" : "MPSectionCategory:abstract",
+      "updatedAt" : 1454523936.471337,
+      "objectType" : "MPSection",
+      "_rev" : "3-8d1b3d759e0fb65f2ffbd55aa0861c6c",
+      "_id" : "MPSection:69A44E72-2F07-418C-88D4-BCD755DF1D98",
+      "path" : [
+        "MPSection:69A44E72-2F07-418C-88D4-BCD755DF1D98"
+      ],
+      "title" : "",
+      "priority" : 3,
+      "createdAt" : 1454523936.457953,
+      "elementIDs" : [
+        "MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB"
+      ],
+      "collection" : "sections"
+    },
+    {
+      "id" : "MPSection:69DB1203-51C9-41C8-8252-6A5D5D1F250E",
+      "updatedAt" : 1454525163.417604,
+      "elementIDs" : [
+        "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15",
+        "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E",
+        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06",
+        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE",
+        "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA",
+        "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21",
+        "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9"
+      ],
+      "objectType" : "MPSection",
+      "_rev" : "20-ca228ea4d419a103999ed76b06ee64cb",
+      "_id" : "MPSection:69DB1203-51C9-41C8-8252-6A5D5D1F250E",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:69DB1203-51C9-41C8-8252-6A5D5D1F250E"
+      ],
+      "title" : "<em>Field location information<\/em>",
+      "priority" : 3,
+      "createdAt" : 1454525087,
+      "collection" : "sections",
+      "sessionID" : "43468236-ABB2-4821-82B2-D7B76EB58702"
+    },
+    {
+      "_id" : "MPSection:942C305B-9AD3-42D4-8B97-050823A23785",
+      "objectType" : "MPSection",
+      "id" : "MPSection:942C305B-9AD3-42D4-8B97-050823A23785",
+      "_rev" : "1-22b887d14afea7c09e1a68a351becf17",
+      "collection" : "sections",
+      "elementIDs" : [
+
+      ],
+      "title" : "",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525371,
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49",
+        "MPSection:8D725A25-632B-4F92-9B29-1D28FEE60D91",
+        "MPSection:942C305B-9AD3-42D4-8B97-050823A23785"
+      ],
+      "priority" : 8
+    },
+    {
+      "category" : "MPSectionCategory:abstract",
+      "_id" : "MPSection:A12BC554-A5AC-4029-A73F-48E620710CD2",
+      "objectType" : "MPSection",
+      "_rev" : "2-7b3112c5964297ab10b2b8ad7ade6fd6",
+      "elementIDs" : [
+        "MPParagraphElement:3A8723BA-C5C2-4DAF-BE45-58CBB246CE3A"
+      ],
+      "title" : "Abstract",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.17204,
+      "path" : [
+        "MPSection:A12BC554-A5AC-4029-A73F-48E620710CD2"
+      ],
+      "priority" : 0,
+      "updatedAt" : 1454523936.350279
+    },
+    {
+      "_id" : "MPSection:C36FFD0A-1759-44ED-D5FF-20B6AEAE7CA1",
+      "objectType" : "MPSection",
+      "id" : "MPSection:C36FFD0A-1759-44ED-D5FF-20B6AEAE7CA1",
+      "_rev" : "6-0cbfc16527a3c3b69e84cec66411646c",
+      "title" : "",
+      "elementIDs" : [
+        "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3"
+      ],
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:C36FFD0A-1759-44ED-D5FF-20B6AEAE7CA1"
+      ],
+      "priority" : 8,
+      "createdAt" : 1454525458
+    },
+    {
+      "category" : "MPSectionCategory:abstract",
+      "_id" : "MPSection:DF913CFC-52B6-432A-8201-ECEA962CAB50",
+      "objectType" : "MPSection",
+      "_rev" : "2-c44e3c95f6534824bd5d10f4264e6776",
+      "elementIDs" : [
+        "MPParagraphElement:3E4D549C-F779-4491-8430-6C45C33932A2"
+      ],
+      "title" : "Introduction",
+      "sessionID" : "DBF0DA49-3303-4B40-9D97-D65C23690BE3",
+      "createdAt" : 1454523936.394768,
+      "path" : [
+        "MPSection:DF913CFC-52B6-432A-8201-ECEA962CAB50"
+      ],
+      "priority" : 1,
+      "updatedAt" : 1454523936.408053
+    },
+    {
+      "_id" : "MPSection:E21DDAB2-70DE-445A-F467-16C28BCD3755",
+      "objectType" : "MPSection",
+      "id" : "MPSection:E21DDAB2-70DE-445A-F467-16C28BCD3755",
+      "_rev" : "9-b5f7b1429d1fdbb41c9531b5501212e5",
+      "title" : "<i>Soil variable sampling and processing<\/i>",
+      "elementIDs" : [
+        "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636"
+      ],
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "path" : [
+        "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
+        "MPSection:E21DDAB2-70DE-445A-F467-16C28BCD3755"
+      ],
+      "priority" : 7,
+      "createdAt" : 1454525439
+    }
+  ],
+  "snapshots" : [
+
+  ]
+}
