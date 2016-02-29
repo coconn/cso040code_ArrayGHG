@@ -1,11 +1,15 @@
 {
+  "annotations" : [
+
+  ],
   "manuscript" : [
     {
+      "createdAt" : 1454524043.045735,
       "_id" : "MPAffiliation:4A6044D5-B363-4C2B-A70B-922CB0D3EAD8",
-      "updatedAt" : 1454524043.045735,
-      "_rev" : "1-e301298b74ddae4bf2080fcb5a554d5e",
+      "updatedAt" : 1455830743.03861,
+      "priority" : 1,
       "objectType" : "MPAffiliation",
-      "createdAt" : 1454524043.045735
+      "_rev" : "2-fb9fa8fe9f7de8513ea084fc5271f7e4"
     },
     {
       "updatedAt" : 1454523935.990347,
@@ -716,6 +720,12 @@
       "updatedAt" : 1454525026.566217
     },
     {
+      "_id" : "MPMetadata:manuscript",
+      "creatorAppBundleIdentifier" : "com.manuscripts.Manuscripts",
+      "_rev" : "1-8735362c9577b5c62a311ccade2755df",
+      "creatorAppBundleVersion" : "1.0.46-1-G6665"
+    },
+    {
       "updatedAt" : 1454523936.127303,
       "topMargin" : 20,
       "objectType" : "MPPageLayout",
@@ -1097,9 +1107,6 @@
       "headerBackgroundColor" : "MPColor:verylightgray"
     }
   ],
-  "annotations" : [
-
-  ],
   "bibliography" : [
     {
       "issued" : {
@@ -1345,12 +1352,12 @@
       "contentParagraphCount" : 7,
       "updatedAt" : 1454539928.970245,
       "elementCharacterCounts" : {
-        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06" : 123,
         "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21" : 148,
+        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06" : 123,
         "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9" : 1468,
         "MPParagraphElement:8BB1D3F7-4972-4EB5-F631-5F085D33CF4E" : 96,
-        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE" : 0,
         "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E" : 0,
+        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE" : 0,
         "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA" : 0,
         "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15" : 485
       },
@@ -1360,12 +1367,12 @@
       "_rev" : "38-cc28e5cd4f00614313d00271337fed5a",
       "_id" : "MPContentSummary:14E79159-A832-4F4D-B701-F58370011C0A",
       "elementWordCounts" : {
-        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06" : 22,
         "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21" : 23,
+        "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06" : 22,
         "MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9" : 235,
         "MPParagraphElement:8BB1D3F7-4972-4EB5-F631-5F085D33CF4E" : 18,
-        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE" : 0,
         "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E" : 0,
+        "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE" : 0,
         "MPParagraphElement:0E5C1437-95C8-47ED-C226-0EDE62502EAA" : 0,
         "MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15" : 82
       },
@@ -1545,11 +1552,11 @@
     },
     {
       "_id" : "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3",
-      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
-      "elementType" : "p",
       "objectType" : "MPParagraphElement",
+      "elementType" : "p",
       "id" : "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3",
       "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
       "contents" : "<p id=\"MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454525469,
@@ -1557,11 +1564,11 @@
     },
     {
       "_id" : "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636",
-      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
-      "elementType" : "p",
       "objectType" : "MPParagraphElement",
+      "elementType" : "p",
       "id" : "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636",
       "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
       "contents" : "<p id=\"MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454525467,
@@ -1569,11 +1576,11 @@
     },
     {
       "_id" : "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC",
-      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
-      "elementType" : "p",
       "objectType" : "MPParagraphElement",
+      "elementType" : "p",
       "id" : "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC",
       "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
       "contents" : "<p id=\"MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454525308,
@@ -1593,15 +1600,15 @@
     },
     {
       "_id" : "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21",
-      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
-      "elementType" : "p",
       "objectType" : "MPParagraphElement",
+      "elementType" : "p",
       "id" : "MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21",
-      "_rev" : "2-ec9da16a414c10b32cc28ac45213a7d6",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
       "contents" : "<p id=\"MPParagraphElement:228B0A1D-CA9E-4355-D16D-FBA253501C21\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\">The LEF contains approximately 11,500 ha of contiguous forest area, spanning an elevation gradient from approximately 350 to 1075 m above sea level.<\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454539419,
-      "collection" : "elements"
+      "_rev" : "2-ec9da16a414c10b32cc28ac45213a7d6"
     },
     {
       "_id" : "MPParagraphElement:3008D801-CC88-47E7-DB4A-307FBEFC377E",
@@ -1656,13 +1663,13 @@
       "objectType" : "MPParagraphElement",
       "elementType" : "p",
       "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
+      "collection" : "elements",
       "placeholderInnerHTML" : "Subsection contents",
-      "_rev" : "50-134239f12a17ab74e7bd466eaade0d35",
       "contents" : "<p id=\"MPParagraphElement:48171FDE-35DE-4126-87CA-636886919D15\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\" data-placeholder-text=\"Subsection contents\">Research was conducted in the Luquillo Experimental Forest (LEF), Puerto Rico, USA (18 18’ N, 65° 50’ W). The forest is congruent with El Yunque National Forest managed by the US Forest Service.  Field measurements were made at El Verde Research Station, a site well characterized as part of the on-going Luquillo Long-Term Ecological Research (LUQ) and the Luquillo Critical Zone Observatory (LCZO) projects based in the LEF <span class=\"citation\" data-reference-id=\"MPCitation:10AFE212-54BC-49A0-B5F5-6BEBEF122605\">(Hall et al. 2012; Silver et al. 1999; Silver et al. 2014)<\/span>.<\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454525120.286253,
       "updatedAt" : 1454539525.005681,
-      "collection" : "elements"
+      "_rev" : "50-134239f12a17ab74e7bd466eaade0d35"
     },
     {
       "_id" : "MPParagraphElement:51F08CB0-619D-46E1-D99F-CAE12204F327",
@@ -1722,16 +1729,16 @@
       "contents" : "<p id=\"MPParagraphElement:AC56ABBD-9B26-40F1-D325-4F8FBDE725D9\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">We will make use of a range of environmental conditions present in the LEF to compare and contrast bedrock types (volcanoclastic and dioritic), topographic zones (ridge, slope, upland valley, riparian valley) and precipitation regimes (windward to leeward, lower and upper elevation). These sites have all been well characterized as part of the on-going LTER and the LCZO projects based on the LEF (Scatena 1989, Silver et al. 1999, Liptzin et al. 2011, Hall et al. 2012, Wood and Silver 2012). Soils in the LEF are derived from volcanoclastic sediments with quartz diorite intrusions (Beinroth 1982). Soils are predominantly classified as Ultisols and Oxisols (Scatena 1989, USDA NRCS 2002). Mean monthly temperatures range from 23.5ºC in January to 27ºC in September at low elevation, and from 17 to 20ºC in the upper elevations. Precipitation ranges from less than 3000 mm y <sup>-1<\/sup> in the low elevations and leeward sites to approximately 5000 mm y <sup>-1<\/sup> near the uppermost elevation and windward locations. The forest can be classified into four life zones based on the Holdridge Life Zone System: subtropical wet and subtropical rain forests are found at low and mid elevations, lower montane rain and lower montane wet forests at high elevations (Brown et al. 1983). These life zones correspond to four dominant vegetation communities that decrease in species richness (Barone et al. 2008), stature, NPP, and aboveground biomass with elevation (Weaver and Murphy 1990).<\/p>",
       "sessionID" : "74CD5F45-15DC-47CD-B1B3-2712B6B67749",
       "createdAt" : 1454539169,
-      "_rev" : "2-cf8cc0683551d3cac1520ae18aeb289b",
-      "updatedAt" : 1454539405.354363
+      "updatedAt" : 1454539405.354363,
+      "_rev" : "2-cf8cc0683551d3cac1520ae18aeb289b"
     },
     {
       "_id" : "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE",
-      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
-      "elementType" : "p",
       "objectType" : "MPParagraphElement",
+      "elementType" : "p",
       "id" : "MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE",
       "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
       "contents" : "<p id=\"MPParagraphElement:D8A9D3BF-3401-4A3B-8259-E5D2315C15DE\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\"><\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454539568,
@@ -1739,11 +1746,11 @@
     },
     {
       "_id" : "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06",
-      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
-      "elementType" : "p",
       "objectType" : "MPParagraphElement",
+      "elementType" : "p",
       "id" : "MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06",
       "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:D31D418D-6C93-4A42-A1CC-7E63D25F33BF",
       "contents" : "<p id=\"MPParagraphElement:D9182432-15B1-462C-E6A6-819787034C06\" class=\"MPElement MPParagraphStyle_D31D418D-6C93-4A42-A1CC-7E63D25F33BF\" data-object-type=\"MPParagraphElement\">things to consider citing: (Scatena 1989, Silver et al. 1999, Liptzin et al. 2011, Hall et al. 2012, Wood and Silver 2012).<\/p>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
       "createdAt" : 1454539878,
@@ -1766,36 +1773,36 @@
       "objectType" : "MPSection",
       "id" : "MPSection:0116433E-72BA-4379-9C56-FE38A7120F72",
       "_rev" : "9-bd7002453cf6bdf9595b28e85e39cf00",
-      "title" : "<i>Experimental design<\/i>",
+      "collection" : "sections",
       "elementIDs" : [
         "MPParagraphElement:0B021FFC-3DD9-4185-99F2-98E14661AFFC"
       ],
-      "collection" : "sections",
+      "title" : "<i>Experimental design<\/i>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525303,
       "path" : [
         "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
         "MPSection:0116433E-72BA-4379-9C56-FE38A7120F72"
       ],
-      "priority" : 4,
-      "createdAt" : 1454525303
+      "priority" : 4
     },
     {
       "_id" : "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01",
       "objectType" : "MPSection",
       "id" : "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01",
       "_rev" : "8-6f47d71b85a7099ec6a269376a232c7b",
-      "title" : "<i>Moisture, Oxygen and Rainfall Measurements<\/i>",
+      "collection" : "sections",
       "elementIDs" : [
         "MPParagraphElement:DC01319A-5BEB-4D0C-9FF8-60A71B6B3B17"
       ],
-      "collection" : "sections",
+      "title" : "<i>Moisture, Oxygen and Rainfall Measurements<\/i>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525321,
       "path" : [
         "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
         "MPSection:0B3F3FB2-3527-478F-8C1D-3CC5B0258C01"
       ],
-      "priority" : 5,
-      "createdAt" : 1454525321
+      "priority" : 5
     },
     {
       "category" : "MPSectionCategory:abstract",
@@ -1819,18 +1826,18 @@
       "objectType" : "MPSection",
       "id" : "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49",
       "_rev" : "10-df9784d824fbadeb9f764f38f18a9360",
-      "title" : "<i>Gas flux measurements<\/i>",
+      "collection" : "sections",
       "elementIDs" : [
         "MPParagraphElement:51F08CB0-619D-46E1-D99F-CAE12204F327"
       ],
-      "collection" : "sections",
+      "title" : "<i>Gas flux measurements<\/i>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525364,
       "path" : [
         "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
         "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49"
       ],
-      "priority" : 6,
-      "createdAt" : 1454525364
+      "priority" : 6
     },
     {
       "category" : "MPSectionCategory:abstract",
@@ -1850,7 +1857,9 @@
       "updatedAt" : 1454523936.497091
     },
     {
-      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "elementIDs" : [
+
+      ],
       "category" : "MPSectionCategory:abstract",
       "updatedAt" : 1454525299.283826,
       "objectType" : "MPSection",
@@ -1862,13 +1871,13 @@
       "title" : "Methods",
       "priority" : 2,
       "createdAt" : 1454523936.425802,
-      "elementIDs" : [
-
-      ],
-      "collection" : "sections"
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07"
     },
     {
-      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "elementIDs" : [
+        "MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB"
+      ],
       "category" : "MPSectionCategory:abstract",
       "updatedAt" : 1454523936.471337,
       "objectType" : "MPSection",
@@ -1880,10 +1889,8 @@
       "title" : "",
       "priority" : 3,
       "createdAt" : 1454523936.457953,
-      "elementIDs" : [
-        "MPParagraphElement:990C59C1-5D9C-43C1-806C-D338AC4BFCCB"
-      ],
-      "collection" : "sections"
+      "collection" : "sections",
+      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07"
     },
     {
       "id" : "MPSection:69DB1203-51C9-41C8-8252-6A5D5D1F250E",
@@ -1911,24 +1918,24 @@
       "sessionID" : "43468236-ABB2-4821-82B2-D7B76EB58702"
     },
     {
-      "_id" : "MPSection:942C305B-9AD3-42D4-8B97-050823A23785",
-      "objectType" : "MPSection",
       "id" : "MPSection:942C305B-9AD3-42D4-8B97-050823A23785",
-      "_rev" : "1-22b887d14afea7c09e1a68a351becf17",
+      "updatedAt" : 1455830739.360932,
       "collection" : "sections",
-      "elementIDs" : [
-
-      ],
-      "title" : "",
-      "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
-      "createdAt" : 1454525371,
+      "objectType" : "MPSection",
+      "_rev" : "2-bc84ceed524f5bca181582cbe4b43626",
+      "_id" : "MPSection:942C305B-9AD3-42D4-8B97-050823A23785",
       "path" : [
         "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
         "MPSection:367BE2D0-CAE8-482D-D1E7-53FE90896C49",
-        "MPSection:8D725A25-632B-4F92-9B29-1D28FEE60D91",
         "MPSection:942C305B-9AD3-42D4-8B97-050823A23785"
       ],
-      "priority" : 8
+      "title" : "",
+      "priority" : 8,
+      "createdAt" : 1454525371,
+      "elementIDs" : [
+
+      ],
+      "sessionID" : "DA284DEE-0D99-43C7-BFCF-68CD4BFA8ACE"
     },
     {
       "category" : "MPSectionCategory:abstract",
@@ -1952,18 +1959,18 @@
       "objectType" : "MPSection",
       "id" : "MPSection:C36FFD0A-1759-44ED-D5FF-20B6AEAE7CA1",
       "_rev" : "6-0cbfc16527a3c3b69e84cec66411646c",
-      "title" : "",
+      "collection" : "sections",
       "elementIDs" : [
         "MPParagraphElement:00C70D35-6833-4303-A223-AD31BFBCC3A3"
       ],
-      "collection" : "sections",
+      "title" : "",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525458,
       "path" : [
         "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
         "MPSection:C36FFD0A-1759-44ED-D5FF-20B6AEAE7CA1"
       ],
-      "priority" : 8,
-      "createdAt" : 1454525458
+      "priority" : 8
     },
     {
       "category" : "MPSectionCategory:abstract",
@@ -1987,18 +1994,18 @@
       "objectType" : "MPSection",
       "id" : "MPSection:E21DDAB2-70DE-445A-F467-16C28BCD3755",
       "_rev" : "9-b5f7b1429d1fdbb41c9531b5501212e5",
-      "title" : "<i>Soil variable sampling and processing<\/i>",
+      "collection" : "sections",
       "elementIDs" : [
         "MPParagraphElement:0428645F-01BE-40BA-E07A-71F5B1622636"
       ],
-      "collection" : "sections",
+      "title" : "<i>Soil variable sampling and processing<\/i>",
       "sessionID" : "2355e4c4-c3ed-4ba7-d8c3-db88ed2b9c07",
+      "createdAt" : 1454525439,
       "path" : [
         "MPSection:5A598AC4-2AC7-423B-BB4A-F9C98B75423B",
         "MPSection:E21DDAB2-70DE-445A-F467-16C28BCD3755"
       ],
-      "priority" : 7,
-      "createdAt" : 1454525439
+      "priority" : 7
     }
   ],
   "snapshots" : [

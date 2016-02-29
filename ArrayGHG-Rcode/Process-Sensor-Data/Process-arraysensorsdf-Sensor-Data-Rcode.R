@@ -36,7 +36,7 @@ ste <- function(x) sqrt(var(x,na.rm=TRUE)/length(na.omit(x)))
 #pathsavefiles = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Rprocessed/"
 pathsavefiles = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan-practice/Getting things together for Whendee/"
 pathsavefigs = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Analyses/SensorFigures/"
-sensordatapath = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan/2015-12/"
+sensordatapath = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan/2016-02/"
 calibrationdatapath = "~/Documents/GITHUB/cso040code_ArrayGHG/ArrayGHG-Data-Raw/Sensor-data-Ryan-practice/"
 
 
@@ -306,9 +306,9 @@ fulldaily$TopoLocation <- as.factor(fulldaily$TopoLocation)
 # DEFINE WHAT GETS ADDED TO THE RUNNING SPREADSHEET
 
 # hourly wide for each
-head(vwchourly)
-head(temphourly)
-head(O2hourly)
+ht(vwchourly)
+ht(temphourly)
+ht(O2hourly)
 
 # daily wide for each
 # go from long to wide using spread() from tidyr
