@@ -1,0 +1,128 @@
+'CR1000
+'Created by Short Cut (3.1)
+
+'Declare Variables and Units
+Dim LCount
+Public BattV
+Public PTemp_C
+Public VW(18)
+Public PA_uS(18)
+Public CS65X(3)
+Public LCount
+Public DiffV(32)
+Public Mult(32)={1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+Public Offs(32)={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+Alias CS65X(1)=VWC
+Alias CS65X(2)=EC
+Alias CS65X(3)=T
+
+Units BattV=Volts
+Units PTemp_C=Deg C
+Units PA_uS=uSec
+Units DiffV=mV
+Units VWC=m^3/m^3
+Units EC=dS/m
+Units T=Deg C
+
+'Define Data Tables
+DataTable(databox4,True,-1)
+	DataInterval(0,1,Min,10)
+	Average(1,DiffV(1),FP2,False)
+	Average(1,DiffV(2),FP2,False)
+	Average(1,DiffV(3),FP2,False)
+	Average(1,DiffV(4),FP2,False)
+	Average(1,DiffV(5),FP2,False)
+	Average(1,DiffV(6),FP2,False)
+	Average(1,DiffV(7),FP2,False)
+	Average(1,DiffV(8),FP2,False)
+	Average(1,DiffV(9),FP2,False)
+	Average(1,DiffV(10),FP2,False)
+	Average(1,DiffV(11),FP2,False)
+	Average(1,DiffV(12),FP2,False)
+	Average(1,DiffV(13),FP2,False)
+	Average(1,DiffV(14),FP2,False)
+	Average(1,DiffV(15),FP2,False)
+	Average(1,DiffV(16),FP2,False)
+	Average(1,DiffV(17),FP2,False)
+	Average(1,DiffV(18),FP2,False)
+	Average(1,DiffV(19),FP2,False)
+	Average(1,DiffV(20),FP2,False)
+	Average(1,DiffV(21),FP2,False)
+	Average(1,DiffV(22),FP2,False)
+	Average(1,DiffV(23),FP2,False)
+	Average(1,DiffV(24),FP2,False)
+	Average(1,DiffV(25),FP2,False)
+	Average(1,DiffV(26),FP2,False)
+	Average(1,DiffV(27),FP2,False)
+	Average(1,DiffV(28),FP2,False)
+	Average(1,DiffV(29),FP2,False)
+	Average(1,DiffV(30),FP2,False)
+	Average(1,DiffV(31),FP2,False)
+	Average(1,DiffV(32),FP2,False)
+	StdDev(1,DiffV(1),FP2,False)
+	StdDev(1,DiffV(2),FP2,False)
+	StdDev(1,DiffV(3),FP2,False)
+	StdDev(1,DiffV(4),FP2,False)
+	StdDev(1,DiffV(5),FP2,False)
+	StdDev(1,DiffV(6),FP2,False)
+	StdDev(1,DiffV(7),FP2,False)
+	StdDev(1,DiffV(8),FP2,False)
+	StdDev(1,DiffV(9),FP2,False)
+	StdDev(1,DiffV(10),FP2,False)
+	StdDev(1,DiffV(11),FP2,False)
+	StdDev(1,DiffV(12),FP2,False)
+	StdDev(1,DiffV(13),FP2,False)
+	StdDev(1,DiffV(14),FP2,False)
+	StdDev(1,DiffV(15),FP2,False)
+	StdDev(1,DiffV(16),FP2,False)
+	StdDev(1,DiffV(17),FP2,False)
+	StdDev(1,DiffV(18),FP2,False)
+	StdDev(1,DiffV(19),FP2,False)
+	StdDev(1,DiffV(20),FP2,False)
+	StdDev(1,DiffV(21),FP2,False)
+	StdDev(1,DiffV(22),FP2,False)
+	StdDev(1,DiffV(23),FP2,False)
+	StdDev(1,DiffV(24),FP2,False)
+	StdDev(1,DiffV(25),FP2,False)
+	StdDev(1,DiffV(26),FP2,False)
+	StdDev(1,DiffV(27),FP2,False)
+	StdDev(1,DiffV(28),FP2,False)
+	StdDev(1,DiffV(29),FP2,False)
+	StdDev(1,DiffV(30),FP2,False)
+	StdDev(1,DiffV(31),FP2,False)
+	StdDev(1,DiffV(32),FP2,False)
+	EndTable
+
+
+'Main Program
+BeginProg
+    'Main Scan
+    Scan(1,Min,1,0)
+        'Default Datalogger Battery Voltage measurement 'BattV'
+        Battery(BattV)
+        'Default Wiring Panel Temperature measurement 'PTemp_C'
+        PanelTemp(PTemp_C,_60Hz)
+        'Turn AM16/32 Multiplexer On
+        PortSet(2,1)
+        Delay(0,150,mSec)
+        LCount=1
+        SubScan(0,uSec,20)
+            'Switch to next AM16/32 Multiplexer channel
+            PulsePort(1,10000)
+            'Generic Differential Voltage measurements 'DiffV()' on the AM16/32 Multiplexer
+            
+            'VoltDiff(DiffV(LCount),1,mV2500,1,True,0,_60Hz)
+            'Tyler thinks that this line is messed up because of the offsets not being defined
+            'this next line makes sure to define the offsets
+            VoltDiff(DiffV(LCount),1,mV2500,1,True,0,_60Hz,Mult(LCount),Offs(LCount))
+            LCount=LCount+1
+        NextSubScan
+        'Turn AM16/32 Multiplexer Off
+        PortSet(2,0)
+        Delay(0,150,mSec)
+        'Call Data Tables and Store Data
+        CallTable databox4
+    NextScan
+EndProg
+

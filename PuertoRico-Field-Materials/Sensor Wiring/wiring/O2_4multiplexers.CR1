@@ -1,0 +1,76 @@
+'CR1000
+'Created by Short Cut (3.1)
+
+'Declare Variables and Units
+Public BattV
+Public PTemp_C
+Public DiffV
+Public DiffV_2
+Public DiffV_3
+Public DiffV_4
+
+Units BattV=Volts
+Units PTemp_C=Deg C
+Units DiffV=mV
+Units DiffV_2=mV
+Units DiffV_3=mV
+Units DiffV_4=mV
+
+'Define Data Tables
+DataTable(Table2,True,-1)
+	DataInterval(0,1440,Min,10)
+	Minimum(1,BattV,FP2,False,False)
+EndTable
+
+'Main Program
+BeginProg
+	'Main Scan
+	Scan(30,Sec,1,0)
+		'Default Datalogger Battery Voltage measurement 'BattV'
+		Battery(BattV)
+		'Default Wiring Panel Temperature measurement 'PTemp_C'
+		PanelTemp(PTemp_C,_60Hz)
+		'Turn AM16/32 Multiplexer On
+		PortSet(2,1)
+		Delay(0,150,mSec)
+		'Switch to next AM16/32 Multiplexer channel
+		PulsePort(1,10000)
+		'Generic Differential Voltage measurements 'DiffV' on the AM16/32 Multiplexer
+		VoltDiff(DiffV,1,mV2500,1,True,0,_60Hz,1,0)
+		'Turn AM16/32 Multiplexer Off
+		PortSet(2,0)
+		Delay(0,150,mSec)
+		'Turn AM16/32 Multiplexer On
+		PortSet(3,1)
+		Delay(0,150,mSec)
+		'Switch to next AM16/32 Multiplexer channel
+		PulsePort(1,10000)
+		'Generic Differential Voltage measurements 'DiffV_2' on the AM16/32 Multiplexer
+		VoltDiff(DiffV_2,1,mV2500,2,True,0,_60Hz,1,0)
+		'Turn AM16/32 Multiplexer Off
+		PortSet(3,0)
+		Delay(0,150,mSec)
+		'Turn AM16/32 Multiplexer On
+		PortSet(4,1)
+		Delay(0,150,mSec)
+		'Switch to next AM16/32 Multiplexer channel
+		PulsePort(1,10000)
+		'Generic Differential Voltage measurements 'DiffV_3' on the AM16/32 Multiplexer
+		VoltDiff(DiffV_3,1,mV2500,3,True,0,_60Hz,1,0)
+		'Turn AM16/32 Multiplexer Off
+		PortSet(4,0)
+		Delay(0,150,mSec)
+		'Turn AM16/32 Multiplexer On
+		PortSet(5,1)
+		Delay(0,150,mSec)
+		'Switch to next AM16/32 Multiplexer channel
+		PulsePort(1,10000)
+		'Generic Differential Voltage measurements 'DiffV_4' on the AM16/32 Multiplexer
+		VoltDiff(DiffV_4,1,mV2500,4,True,0,_60Hz,1,0)
+		'Turn AM16/32 Multiplexer Off
+		PortSet(5,0)
+		Delay(0,150,mSec)
+		'Call Data Tables and Store Data
+		CallTable Table2
+	NextScan
+EndProg

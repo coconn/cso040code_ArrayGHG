@@ -45,21 +45,23 @@ if(alreadybuiltcsv=="n") {
       
       # bring in excel data
       data <- read.xlsx(paste(pathfile,"Copy of Daily 11132013- 12152015 GAPS INCLUDED.xlsx",sep=""),"Sheet2", colIndex = c(1:8))
-      data2 <- as.data.frame(data, stringsAsFactors=FALSE)
+      data2 <- subset(data, !is.na(data$Date))
+      data2 <- as.data.frame(data2, stringsAsFactors=FALSE)
       
       # rename cols
       newnames <- c("Date","DayCount","Transect","TopoLocation","O2","O2_pct","SoilMoisture","SoilMoisture_pct")
       names(data2) <- newnames
       
       # fix dates
-      # not needed, since initial read is POSIXct; str(data2$Date)
-      #data2$Date <- as.Date(data2$Date)
-      #data2$Date2 <- ymd(data2$Date)
+      # sometimes not needed, since initial read is POSIXct; str(data2$Date)
+      data2$Date <- as.Date(data2$Date)
+      data2$Date <- ymd(data2$Date)
       
       # add useful post- and pre-drought column
-      data2$Drought <- "Post-drought"
+      data2$Drought <- "Post-Drought"
+      data2$Drought[data2$DayCount <= 300] <- "Drought"
       data2$Drought[data2$DayCount <= 150] <- "Pre-drought"
-      
+
       # save as csv
       arraysensorsdf_precleaned <- data2
       write.csv(arraysensorsdf_precleaned, file=paste(pathsavefiles, "arraysensorsdf_precleaned.csv", sep = ""), row.names=FALSE)  
@@ -78,6 +80,10 @@ if(alreadybuiltcsv=="n") {
 # make factors where needed
 arraysensorsdf_precleaned$Transect <- as.factor(arraysensorsdf_precleaned$Transect)
 arraysensorsdf_precleaned$TopoLocation <- as.factor(arraysensorsdf_precleaned$TopoLocation)
+
+# make sure that formats are ok
+arraysensorsdf_precleaned$Date <- as.Date(arraysensorsdf_precleaned$Date)
+arraysensorsdf_precleaned$O2 <- as.numeric(arraysensorsdf_precleaned$O2)
 
 
 ########################################################################
@@ -120,93 +126,99 @@ write.csv(arraysensorsdf, file=paste(pathsavefiles, "arraysensorsdf.csv", sep = 
 
 
 
-########################################################################
-# SUMMARY STATS: O2, MOISTURE ACROSS TRANSECTS AT EACH DATE
 
-# summarySE using plyr
-source("~/Documents/GITHUB/RPersonalFunctionsChristine/summarySE.r")
-
-# summarySE O2
-summarytab1tmp <- summarySE(data=arraysensorsdf, measurevar="O2", c("Date", "DayCount", "TopoLocation", "Drought"), na.rm=TRUE, renameallcols=TRUE)
-# summarySE moisture
-summarytab2tmp <- summarySE(data=arraysensorsdf, measurevar="SoilMoisture", c("Date", "DayCount", "TopoLocation", "Drought"), na.rm=TRUE, renameallcols=TRUE)
-
-# take out weird NA lines
-summarytab1 <- subset(summarytab1tmp,summarytab1tmp$N>0.5)
-summarytab2 <- subset(summarytab2tmp,summarytab2tmp$N>0.5)
-
-# convert summary table dates
-summarytab1$Date <- ymd_hms(summarytab1$Date)
-summarytab2$Date <- ymd_hms(summarytab2$Date)
-
-
-########################################################################
-# EXPLORATORY FIGURES: TIME SERIES
-
-topocolors <- c("navy","blue","dark green","green","yellow","orange","red")
-topobreaks <- c("1","2","3","4","5","6","7")
-topolabs <- c("1 (Ridge)","2","3","4","5","6","7 (Valley)")
-
-# O2 by date (mean and se)
-p1 <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
-
-# moisture by date (mean and se)
-p2 <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
-
-# moisture and O2 into panels for combo figure
-p3a <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
-
-# moisture by date (mean and se)
-p3b <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture (Mean Fraction +/- Standard Error)") + theme_bw() + theme(legend.position = "bottom", legend.direction=("horizontal"), axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
-
-
-theme(legend.position = "none", plot.margin=unit(c(-0.5,1,0,1), "cm"), axis.title.x = element_blank())
+# the rest of the below ended up getting moved over to the figure making files
 
 
 
-# save figures
-png(file = paste(pathsavefigs, "time_series_O2.png", sep=""),width=10,height=7,units="in",res=400)
-p1
-dev.off()
+# 
+# ########################################################################
+# # SUMMARY STATS: O2, MOISTURE ACROSS TRANSECTS AT EACH DATE
+# 
+# # summarySE using plyr
+# source("~/Documents/GITHUB/RPersonalFunctionsChristine/summarySE.r")
+# 
+# # summarySE O2
+# summarytab1tmp <- summarySE(data=arraysensorsdf, measurevar="O2", c("Date", "DayCount", "TopoLocation", "Drought"), na.rm=TRUE, renameallcols=TRUE)
+# # summarySE moisture
+# summarytab2tmp <- summarySE(data=arraysensorsdf, measurevar="SoilMoisture", c("Date", "DayCount", "TopoLocation", "Drought"), na.rm=TRUE, renameallcols=TRUE)
+# 
+# # take out weird NA lines
+# summarytab1 <- subset(summarytab1tmp,summarytab1tmp$N>0.5)
+# summarytab2 <- subset(summarytab2tmp,summarytab2tmp$N>0.5)
+# 
+# # convert summary table dates
+# summarytab1$Date <- ymd(summarytab1$Date)
+# summarytab2$Date <- ymd(summarytab2$Date)
+# 
+# 
+# ########################################################################
+# # EXPLORATORY FIGURES: TIME SERIES
+# 
+# topocolors <- c("navy","blue","dark green","green","yellow","orange","red")
+# topobreaks <- c("1","2","3","4","5","6","7")
+# topolabs <- c("1 (Ridge)","2","3","4","5","6","7 (Valley)")
+# 
+# # O2 by date (mean and se)
+# p1 <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+# 
+# # moisture by date (mean and se)
+# p2 <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+# 
+# # moisture and O2 into panels for combo figure
+# p3a <- ggplot(summarytab1, aes(x=Date, y=meanO2, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanO2-seO2, ymax=meanO2+seO2), alpha=0.5) + ylab("Soil O2 (Mean Fraction +/- Standard Error)") + theme_bw() + theme(axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+# 
+# # moisture by date (mean and se)
+# p3b <- ggplot(summarytab2, aes(x=Date, y=meanSoilMoisture, color=TopoLocation)) + geom_point() + geom_errorbar(aes(ymin=meanSoilMoisture-seSoilMoisture, ymax=meanSoilMoisture+seSoilMoisture), alpha=0.5) + ylab("Soil Moisture (Mean Fraction +/- Standard Error)") + theme_bw() + theme(legend.position = "bottom", legend.direction=("horizontal"), axis.text.x=element_text(angle=90)) + scale_x_datetime(breaks = date_breaks("4 weeks"), labels = date_format("%d-%m-%y")) + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs) #+ geom_line()
+# 
+# 
+# theme(legend.position = "none", plot.margin=unit(c(-0.5,1,0,1), "cm"), axis.title.x = element_blank())
+# 
+# 
+# 
+# # save figures
+# png(file = paste(pathsavefigs, "time_series_O2.png", sep=""),width=10,height=7,units="in",res=400)
+# p1
+# dev.off()
+# 
+# # save figures
+# png(file = paste(pathsavefigs, "time_series_moisture.png", sep=""),width=10,height=7,units="in",res=400)
+# p2
+# dev.off()
+# 
+# # save figures
+# png(file = paste(pathsavefigs, "time_series_moistureO2panels.png", sep=""),width=10,height=9,units="in",res=400)
+# grid.arrange(p1, p2, nrow = 2, ncol = 1)
+# dev.off()
 
-# save figures
-png(file = paste(pathsavefigs, "time_series_moisture.png", sep=""),width=10,height=7,units="in",res=400)
-p2
-dev.off()
-
-# save figures
-png(file = paste(pathsavefigs, "time_series_moistureO2panels.png", sep=""),width=10,height=9,units="in",res=400)
-grid.arrange(p1, p2, nrow = 2, ncol = 1)
-dev.off()
-
-
-########################################################################
-# EXPLORATORY FIGURES: O2 / MOISTURE RELATIONSHIP
-
-# O2 by date (mean and se)
-p3 <- ggplot(arraysensorsdf, aes(x=SoilMoisture, y=O2, color=TopoLocation)) + geom_point(shape=1, alpha=0.5) + facet_wrap( ~ Drought, nrow=2) + xlab("Soil Moisture (Fraction)") + ylab("Soil O2 (Fraction)")
-
-# loess smooth figure
-eq <- substitute(italic(Trend)~~italic(lines):~~italic(local)~~italic(polynomial)~~italic(fit))
-eqstr <- as.character(as.expression(eq))
-p4 <- p3 + geom_smooth(size = 1) + annotate(geom="text", x = -Inf, y = -Inf, hjust=-0.08, vjust=-0.5, label = eqstr, parse = TRUE, size = 3)
-
-# linear fit figure
-eq <- substitute(italic(Trend)~~italic(lines):~~italic(linear)~~italic(fit))
-eqstr <- as.character(as.expression(eq))
-p5 <- p3 + geom_smooth(size = 1, method="lm") + annotate(geom="text", x = -Inf, y = -Inf, hjust=-0.08, vjust=-0.5, label = eqstr, parse = TRUE, size = 3) + theme_bw() + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs)
-
-# save figures
-#png(file = paste(pathsavefigures, "correlation_O2moisture_loess.png", sep=""),width=6,height=9,units="in",res=400)
-#p4
-#dev.off()
-
-# save figures
-png(file = paste(pathsavefigs, "correlation_O2moisture_lm.png", sep=""),width=6,height=9,units="in",res=400)
-p5
-dev.off()
-
-
+# 
+# ########################################################################
+# # EXPLORATORY FIGURES: O2 / MOISTURE RELATIONSHIP
+# 
+# # O2 by date (mean and se)
+# p3 <- ggplot(arraysensorsdf, aes(x=SoilMoisture, y=O2, color=TopoLocation)) + geom_point(shape=1, alpha=0.5) + facet_wrap( ~ Drought, nrow=2) + xlab("Soil Moisture (Fraction)") + ylab("Soil O2 (Fraction)")
+# 
+# # loess smooth figure
+# eq <- substitute(italic(Trend)~~italic(lines):~~italic(local)~~italic(polynomial)~~italic(fit))
+# eqstr <- as.character(as.expression(eq))
+# p4 <- p3 + geom_smooth(size = 1) + annotate(geom="text", x = -Inf, y = -Inf, hjust=-0.08, vjust=-0.5, label = eqstr, parse = TRUE, size = 3)
+# 
+# # linear fit figure
+# eq <- substitute(italic(Trend)~~italic(lines):~~italic(linear)~~italic(fit))
+# eqstr <- as.character(as.expression(eq))
+# p5 <- p3 + geom_smooth(size = 1, method="lm") + annotate(geom="text", x = -Inf, y = -Inf, hjust=-0.08, vjust=-0.5, label = eqstr, parse = TRUE, size = 3) + theme_bw() + scale_colour_discrete(name="Topographic\nLocation", labels=topolabs)
+# 
+# # save figures
+# #png(file = paste(pathsavefigures, "correlation_O2moisture_loess.png", sep=""),width=6,height=9,units="in",res=400)
+# #p4
+# #dev.off()
+# 
+# # save figures
+# png(file = paste(pathsavefigs, "correlation_O2moisture_lm.png", sep=""),width=6,height=9,units="in",res=400)
+# p5
+# dev.off()
+# 
+# 
 
 
 

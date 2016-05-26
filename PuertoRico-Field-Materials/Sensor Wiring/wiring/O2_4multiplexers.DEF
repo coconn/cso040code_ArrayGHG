@@ -1,0 +1,99 @@
+3/8/2016
+16:58:49
+Created by Short Cut (3.1)
+Short Cut Program:  O2_4multiplexers.DEF
+
+-Wiring for CR1000-
+
+  AM16/32 Multiplexer (2x32 mode) (1)
+    1H:  COM ODD H
+    1L:  COM ODD L
+    Ground:  COM Ground
+    G:  GND
+    12V:  12V
+    C1:  CLK
+    C2:  RES
+
+  AM16/32 Multiplexer (2x32 mode) (2)
+    Ground:  COM Ground
+    2H:  COM ODD H
+    2L:  COM ODD L
+    G:  GND
+    12V:  12V
+    C1:  CLK
+    C3:  RES
+
+  AM16/32 Multiplexer (2x32 mode) (3)
+    Ground:  COM Ground
+    3H:  COM ODD H
+    3L:  COM ODD L
+    G:  GND
+    12V:  12V
+    C1:  CLK
+    C4:  RES
+
+  AM16/32 Multiplexer (2x32 mode) (4)
+    Ground:  COM Ground
+    4H:  COM ODD H
+    4L:  COM ODD L
+    G:  GND
+    12V:  12V
+    C1:  CLK
+    C5:  RES
+
+-Wiring for AM16/32 Multiplexer (2x32 mode) (1)-
+
+  Differential Voltage
+    1H:  High
+    1L:  Low
+    BGround:  Shield
+
+-Wiring for AM16/32 Multiplexer (2x32 mode) (2)-
+
+  Differential Voltage
+    1H:  High
+    1L:  Low
+    BGround:  Shield
+
+-Wiring for AM16/32 Multiplexer (2x32 mode) (3)-
+
+  Differential Voltage
+    1H:  High
+    1L:  Low
+    BGround:  Shield
+
+-Wiring for AM16/32 Multiplexer (2x32 mode) (4)-
+
+  Differential Voltage
+    1H:  High
+    1L:  Low
+    BGround:  Shield
+
+-Measurement Labels-
+
+  Default Measurements
+    BattV
+    PTemp_C
+
+  Differential Voltage
+    DiffV
+    DiffV_2
+    DiffV_3
+    DiffV_4
+
+----------------------------------------------------
+Table: Table2
+Interval: 1440 MIN
+Fields:
+ BattV_Min	Units: Volts
+
+----------------------------------------------------
+Table: Public
+Fields:
+ BattV	Units: Volts
+ PTemp_C	Units: Deg C
+ DiffV	Units: mV
+ DiffV_2	Units: mV
+ DiffV_3	Units: mV
+ DiffV_4	Units: mV
+

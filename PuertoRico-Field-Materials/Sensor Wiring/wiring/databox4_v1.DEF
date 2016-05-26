@@ -1,0 +1,796 @@
+3/9/2016
+09:25:58
+Created by Short Cut (3.1)
+Short Cut Program:  databox4_v1.DEF
+
+-Wiring for CR1000-
+
+  AM16/32 Multiplexer (4x16 mode) (2)
+    1H:  COM ODD L
+    1L:  COM EVEN H
+    Ground:  COM Ground
+    2H:  COM EVEN L
+    G:  GND
+    12V:  12V
+    C1:  CLK
+    C2:  COM ODD H
+    C3:  RES
+
+  CS650/655 Water Content Reflectometer (VWC, EC, and T)
+    G:  Black
+    G:  Clear
+    G:  Orange
+    12V:  Red
+    C7:  Green
+
+  AM16/32 Multiplexer (2x32 mode) (1)
+    Ground:  COM Ground
+    3H:  COM ODD H
+    3L:  COM ODD L
+    G:  GND
+    12V:  12V
+    C1:  CLK
+    C4:  RES
+
+-Wiring for AM16/32 Multiplexer (2x32 mode) (1)-
+
+  Differential Voltage (1)
+    1H:  High
+    1L:  Low
+    BGround:  Shield
+
+  Differential Voltage (2)
+    2H:  High
+    2L:  Low
+    BGround:  Shield
+
+  Differential Voltage (3)
+    3H:  High
+    3L:  Low
+    BGround:  Shield
+
+  Differential Voltage (4)
+    4H:  High
+    4L:  Low
+    BGround:  Shield
+
+  Differential Voltage (5)
+    5H:  High
+    5L:  Low
+    BGround:  Shield
+
+  Differential Voltage (6)
+    6H:  High
+    6L:  Low
+    BGround:  Shield
+
+  Differential Voltage (7)
+    7H:  High
+    7L:  Low
+    BGround:  Shield
+
+  Differential Voltage (8)
+    8H:  High
+    8L:  Low
+    BGround:  Shield
+
+  Differential Voltage (9)
+    9H:  High
+    9L:  Low
+    BGround:  Shield
+
+  Differential Voltage (10)
+    10H:  High
+    10L:  Low
+    BGround:  Shield
+
+  Differential Voltage (11)
+    11H:  High
+    11L:  Low
+    BGround:  Shield
+
+  Differential Voltage (12)
+    12H:  High
+    12L:  Low
+    BGround:  Shield
+
+  Differential Voltage (13)
+    13H:  High
+    13L:  Low
+    BGround:  Shield
+
+  Differential Voltage (14)
+    14H:  High
+    14L:  Low
+    BGround:  Shield
+
+  Differential Voltage (15)
+    15H:  High
+    15L:  Low
+    BGround:  Shield
+
+  Differential Voltage (16)
+    16H:  High
+    16L:  Low
+    BGround:  Shield
+
+  Differential Voltage (17)
+    17H:  High
+    17L:  Low
+    BGround:  Shield
+
+  Differential Voltage (18)
+    18H:  High
+    18L:  Low
+    BGround:  Shield
+
+  Differential Voltage (19)
+    19H:  High
+    19L:  Low
+    BGround:  Shield
+
+  Differential Voltage (20)
+    20H:  High
+    20L:  Low
+    BGround:  Shield
+
+  Differential Voltage (21)
+    21H:  High
+    21L:  Low
+    BGround:  Shield
+
+  Differential Voltage (22)
+    22H:  High
+    22L:  Low
+    BGround:  Shield
+
+  Differential Voltage (23)
+    23H:  High
+    23L:  Low
+    BGround:  Shield
+
+  Differential Voltage (24)
+    24H:  High
+    24L:  Low
+    BGround:  Shield
+
+  Differential Voltage (25)
+    25H:  High
+    25L:  Low
+    BGround:  Shield
+
+  Differential Voltage (26)
+    26H:  High
+    26L:  Low
+    BGround:  Shield
+
+  Differential Voltage (27)
+    27H:  High
+    27L:  Low
+    BGround:  Shield
+
+  Differential Voltage (28)
+    28H:  High
+    28L:  Low
+    BGround:  Shield
+
+  Differential Voltage (29)
+    29H:  High
+    29L:  Low
+    BGround:  Shield
+
+  Differential Voltage (30)
+    30H:  High
+    30L:  Low
+    BGround:  Shield
+
+  Differential Voltage (31)
+    31H:  High
+    31L:  Low
+    BGround:  Shield
+
+  Differential Voltage (32)
+    32H:  High
+    32L:  Low
+    BGround:  Shield
+
+-Wiring for AM16/32 Multiplexer (4x16 mode) (2)-
+
+  CS616 Water Content Reflectometer (1)
+    1H:  Orange
+    1L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (2)
+    1H:  Orange
+    BGround:  Clear
+    2H:  Green
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (3)
+    1H:  Orange
+    2L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (4)
+    3H:  Orange
+    3L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (5)
+    3H:  Orange
+    BGround:  Clear
+    4H:  Green
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (6)
+    3H:  Orange
+    4L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (7)
+    5H:  Orange
+    5L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (8)
+    5H:  Orange
+    BGround:  Clear
+    6H:  Green
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (9)
+    5H:  Orange
+    6L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (10)
+    7H:  Orange
+    7L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (11)
+    7H:  Orange
+    BGround:  Clear
+    8H:  Green
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (12)
+    7H:  Orange
+    8L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (13)
+    9H:  Orange
+    9L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (14)
+    9H:  Orange
+    BGround:  Clear
+    10H:  Green
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (15)
+    9H:  Orange
+    10L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (16)
+    11H:  Orange
+    11L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (17)
+    11H:  Orange
+    BGround:  Clear
+    12H:  Green
+    BGround:  Black
+    12V:  Red
+
+  CS616 Water Content Reflectometer (18)
+    11H:  Orange
+    12L:  Green
+    BGround:  Clear
+    BGround:  Black
+    12V:  Red
+
+-Measurement Labels-
+
+  Default Measurements
+    BattV
+    PTemp_C
+
+  CS650/655 Water Content Reflectometer (VWC, EC, and T)
+    VWC
+    EC
+    T
+
+  Differential Voltage (1)
+    DiffV(1)
+
+  Differential Voltage (2)
+    DiffV(2)
+
+  Differential Voltage (3)
+    DiffV(3)
+
+  Differential Voltage (4)
+    DiffV(4)
+
+  Differential Voltage (5)
+    DiffV(5)
+
+  Differential Voltage (6)
+    DiffV(6)
+
+  Differential Voltage (7)
+    DiffV(7)
+
+  Differential Voltage (8)
+    DiffV(8)
+
+  Differential Voltage (9)
+    DiffV(9)
+
+  Differential Voltage (10)
+    DiffV(10)
+
+  Differential Voltage (11)
+    DiffV(11)
+
+  Differential Voltage (12)
+    DiffV(12)
+
+  Differential Voltage (13)
+    DiffV(13)
+
+  Differential Voltage (14)
+    DiffV(14)
+
+  Differential Voltage (15)
+    DiffV(15)
+
+  Differential Voltage (16)
+    DiffV(16)
+
+  Differential Voltage (17)
+    DiffV(17)
+
+  Differential Voltage (18)
+    DiffV(18)
+
+  Differential Voltage (19)
+    DiffV(19)
+
+  Differential Voltage (20)
+    DiffV(20)
+
+  Differential Voltage (21)
+    DiffV(21)
+
+  Differential Voltage (22)
+    DiffV(22)
+
+  Differential Voltage (23)
+    DiffV(23)
+
+  Differential Voltage (24)
+    DiffV(24)
+
+  Differential Voltage (25)
+    DiffV(25)
+
+  Differential Voltage (26)
+    DiffV(26)
+
+  Differential Voltage (27)
+    DiffV(27)
+
+  Differential Voltage (28)
+    DiffV(28)
+
+  Differential Voltage (29)
+    DiffV(29)
+
+  Differential Voltage (30)
+    DiffV(30)
+
+  Differential Voltage (31)
+    DiffV(31)
+
+  Differential Voltage (32)
+    DiffV(32)
+
+  CS616 Water Content Reflectometer (1)
+    VW(1)
+    PA_uS(1)
+
+  CS616 Water Content Reflectometer (2)
+    VW(2)
+    PA_uS(2)
+
+  CS616 Water Content Reflectometer (3)
+    VW(3)
+    PA_uS(3)
+
+  CS616 Water Content Reflectometer (4)
+    VW(4)
+    PA_uS(4)
+
+  CS616 Water Content Reflectometer (5)
+    VW(5)
+    PA_uS(5)
+
+  CS616 Water Content Reflectometer (6)
+    VW(6)
+    PA_uS(6)
+
+  CS616 Water Content Reflectometer (7)
+    VW(7)
+    PA_uS(7)
+
+  CS616 Water Content Reflectometer (8)
+    VW(8)
+    PA_uS(8)
+
+  CS616 Water Content Reflectometer (9)
+    VW(9)
+    PA_uS(9)
+
+  CS616 Water Content Reflectometer (10)
+    VW(10)
+    PA_uS(10)
+
+  CS616 Water Content Reflectometer (11)
+    VW(11)
+    PA_uS(11)
+
+  CS616 Water Content Reflectometer (12)
+    VW(12)
+    PA_uS(12)
+
+  CS616 Water Content Reflectometer (13)
+    VW(13)
+    PA_uS(13)
+
+  CS616 Water Content Reflectometer (14)
+    VW(14)
+    PA_uS(14)
+
+  CS616 Water Content Reflectometer (15)
+    VW(15)
+    PA_uS(15)
+
+  CS616 Water Content Reflectometer (16)
+    VW(16)
+    PA_uS(16)
+
+  CS616 Water Content Reflectometer (17)
+    VW(17)
+    PA_uS(17)
+
+  CS616 Water Content Reflectometer (18)
+    VW(18)
+    PA_uS(18)
+
+----------------------------------------------------
+Table: databox4
+Interval: 1 MIN
+Fields:
+ DiffV_Avg(1)	Units: mV
+ DiffV_Avg(2)	Units: mV
+ DiffV_Avg(3)	Units: mV
+ DiffV_Avg(4)	Units: mV
+ DiffV_Avg(5)	Units: mV
+ DiffV_Avg(6)	Units: mV
+ DiffV_Avg(7)	Units: mV
+ DiffV_Avg(8)	Units: mV
+ DiffV_Avg(9)	Units: mV
+ DiffV_Avg(10)	Units: mV
+ DiffV_Avg(11)	Units: mV
+ DiffV_Avg(12)	Units: mV
+ DiffV_Avg(13)	Units: mV
+ DiffV_Avg(14)	Units: mV
+ DiffV_Avg(15)	Units: mV
+ DiffV_Avg(16)	Units: mV
+ DiffV_Avg(17)	Units: mV
+ DiffV_Avg(18)	Units: mV
+ DiffV_Avg(19)	Units: mV
+ DiffV_Avg(20)	Units: mV
+ DiffV_Avg(21)	Units: mV
+ DiffV_Avg(22)	Units: mV
+ DiffV_Avg(23)	Units: mV
+ DiffV_Avg(24)	Units: mV
+ DiffV_Avg(25)	Units: mV
+ DiffV_Avg(26)	Units: mV
+ DiffV_Avg(27)	Units: mV
+ DiffV_Avg(28)	Units: mV
+ DiffV_Avg(29)	Units: mV
+ DiffV_Avg(30)	Units: mV
+ DiffV_Avg(31)	Units: mV
+ DiffV_Avg(32)	Units: mV
+ DiffV_Std(1)	Units: mV
+ DiffV_Std(2)	Units: mV
+ DiffV_Std(3)	Units: mV
+ DiffV_Std(4)	Units: mV
+ DiffV_Std(5)	Units: mV
+ DiffV_Std(6)	Units: mV
+ DiffV_Std(7)	Units: mV
+ DiffV_Std(8)	Units: mV
+ DiffV_Std(9)	Units: mV
+ DiffV_Std(10)	Units: mV
+ DiffV_Std(11)	Units: mV
+ DiffV_Std(12)	Units: mV
+ DiffV_Std(13)	Units: mV
+ DiffV_Std(14)	Units: mV
+ DiffV_Std(15)	Units: mV
+ DiffV_Std(16)	Units: mV
+ DiffV_Std(17)	Units: mV
+ DiffV_Std(18)	Units: mV
+ DiffV_Std(19)	Units: mV
+ DiffV_Std(20)	Units: mV
+ DiffV_Std(21)	Units: mV
+ DiffV_Std(22)	Units: mV
+ DiffV_Std(23)	Units: mV
+ DiffV_Std(24)	Units: mV
+ DiffV_Std(25)	Units: mV
+ DiffV_Std(26)	Units: mV
+ DiffV_Std(27)	Units: mV
+ DiffV_Std(28)	Units: mV
+ DiffV_Std(29)	Units: mV
+ DiffV_Std(30)	Units: mV
+ DiffV_Std(31)	Units: mV
+ DiffV_Std(32)	Units: mV
+ VW_Avg(1)
+ PA_uS_Avg(1)	Units: uSec
+ VW_Avg(2)
+ PA_uS_Avg(2)	Units: uSec
+ VW_Avg(3)
+ PA_uS_Avg(3)	Units: uSec
+ VW_Avg(4)
+ PA_uS_Avg(4)	Units: uSec
+ VW_Avg(5)
+ PA_uS_Avg(5)	Units: uSec
+ VW_Avg(6)
+ PA_uS_Avg(6)	Units: uSec
+ VW_Avg(7)
+ PA_uS_Avg(7)	Units: uSec
+ VW_Avg(8)
+ PA_uS_Avg(8)	Units: uSec
+ VW_Avg(9)
+ PA_uS_Avg(9)	Units: uSec
+ VW_Avg(10)
+ PA_uS_Avg(10)	Units: uSec
+ VW_Avg(11)
+ PA_uS_Avg(11)	Units: uSec
+ VW_Avg(12)
+ PA_uS_Avg(12)	Units: uSec
+ VW_Avg(13)
+ PA_uS_Avg(13)	Units: uSec
+ VW_Avg(14)
+ PA_uS_Avg(14)	Units: uSec
+ VW_Avg(15)
+ PA_uS_Avg(15)	Units: uSec
+ VW_Avg(16)
+ PA_uS_Avg(16)	Units: uSec
+ VW_Avg(17)
+ PA_uS_Avg(17)	Units: uSec
+ VW_Avg(18)
+ PA_uS_Avg(18)	Units: uSec
+ VW_Std(1)
+ PA_uS_Std(1)	Units: uSec
+ VW_Std(2)
+ PA_uS_Std(2)	Units: uSec
+ VW_Std(3)
+ PA_uS_Std(3)	Units: uSec
+ VW_Std(4)
+ PA_uS_Std(4)	Units: uSec
+ VW_Std(5)
+ PA_uS_Std(5)	Units: uSec
+ VW_Std(6)
+ PA_uS_Std(6)	Units: uSec
+ VW_Std(7)
+ PA_uS_Std(7)	Units: uSec
+ VW_Std(8)
+ PA_uS_Std(8)	Units: uSec
+ VW_Std(9)
+ PA_uS_Std(9)	Units: uSec
+ VW_Std(10)
+ PA_uS_Std(10)	Units: uSec
+ VW_Std(11)
+ PA_uS_Std(11)	Units: uSec
+ VW_Std(12)
+ PA_uS_Std(12)	Units: uSec
+ VW_Std(13)
+ PA_uS_Std(13)	Units: uSec
+ VW_Std(14)
+ PA_uS_Std(14)	Units: uSec
+ VW_Std(15)
+ PA_uS_Std(15)	Units: uSec
+ VW_Std(16)
+ PA_uS_Std(16)	Units: uSec
+ VW_Std(17)
+ PA_uS_Std(17)	Units: uSec
+ VW_Std(18)
+ PA_uS_Std(18)	Units: uSec
+ VWC_Avg	Units: m^3/m^3
+ EC_Avg	Units: dS/m
+ T_Avg	Units: Deg C
+ VWC_Std	Units: m^3/m^3
+ EC_Std	Units: dS/m
+ T_Std	Units: Deg C
+ BattV_Min	Units: Volts
+ BattV_Avg	Units: Volts
+ PTemp_C_Avg	Units: Deg C
+ PTemp_C_Max	Units: Deg C
+
+----------------------------------------------------
+Table: Public
+Fields:
+ BattV	Units: Volts
+ PTemp_C	Units: Deg C
+ VW(1)
+ VW(2)
+ VW(3)
+ VW(4)
+ VW(5)
+ VW(6)
+ VW(7)
+ VW(8)
+ VW(9)
+ VW(10)
+ VW(11)
+ VW(12)
+ VW(13)
+ VW(14)
+ VW(15)
+ VW(16)
+ VW(17)
+ VW(18)
+ PA_uS(1)	Units: uSec
+ PA_uS(2)	Units: uSec
+ PA_uS(3)	Units: uSec
+ PA_uS(4)	Units: uSec
+ PA_uS(5)	Units: uSec
+ PA_uS(6)	Units: uSec
+ PA_uS(7)	Units: uSec
+ PA_uS(8)	Units: uSec
+ PA_uS(9)	Units: uSec
+ PA_uS(10)	Units: uSec
+ PA_uS(11)	Units: uSec
+ PA_uS(12)	Units: uSec
+ PA_uS(13)	Units: uSec
+ PA_uS(14)	Units: uSec
+ PA_uS(15)	Units: uSec
+ PA_uS(16)	Units: uSec
+ PA_uS(17)	Units: uSec
+ PA_uS(18)	Units: uSec
+ VWC	Units: m^3/m^3
+ EC	Units: dS/m
+ T	Units: Deg C
+ LCount_2
+ DiffV(1)	Units: mV
+ DiffV(2)	Units: mV
+ DiffV(3)	Units: mV
+ DiffV(4)	Units: mV
+ DiffV(5)	Units: mV
+ DiffV(6)	Units: mV
+ DiffV(7)	Units: mV
+ DiffV(8)	Units: mV
+ DiffV(9)	Units: mV
+ DiffV(10)	Units: mV
+ DiffV(11)	Units: mV
+ DiffV(12)	Units: mV
+ DiffV(13)	Units: mV
+ DiffV(14)	Units: mV
+ DiffV(15)	Units: mV
+ DiffV(16)	Units: mV
+ DiffV(17)	Units: mV
+ DiffV(18)	Units: mV
+ DiffV(19)	Units: mV
+ DiffV(20)	Units: mV
+ DiffV(21)	Units: mV
+ DiffV(22)	Units: mV
+ DiffV(23)	Units: mV
+ DiffV(24)	Units: mV
+ DiffV(25)	Units: mV
+ DiffV(26)	Units: mV
+ DiffV(27)	Units: mV
+ DiffV(28)	Units: mV
+ DiffV(29)	Units: mV
+ DiffV(30)	Units: mV
+ DiffV(31)	Units: mV
+ DiffV(32)	Units: mV
+ Mult(1)
+ Mult(2)
+ Mult(3)
+ Mult(4)
+ Mult(5)
+ Mult(6)
+ Mult(7)
+ Mult(8)
+ Mult(9)
+ Mult(10)
+ Mult(11)
+ Mult(12)
+ Mult(13)
+ Mult(14)
+ Mult(15)
+ Mult(16)
+ Mult(17)
+ Mult(18)
+ Mult(19)
+ Mult(20)
+ Mult(21)
+ Mult(22)
+ Mult(23)
+ Mult(24)
+ Mult(25)
+ Mult(26)
+ Mult(27)
+ Mult(28)
+ Mult(29)
+ Mult(30)
+ Mult(31)
+ Mult(32)
+ Offs(1)
+ Offs(2)
+ Offs(3)
+ Offs(4)
+ Offs(5)
+ Offs(6)
+ Offs(7)
+ Offs(8)
+ Offs(9)
+ Offs(10)
+ Offs(11)
+ Offs(12)
+ Offs(13)
+ Offs(14)
+ Offs(15)
+ Offs(16)
+ Offs(17)
+ Offs(18)
+ Offs(19)
+ Offs(20)
+ Offs(21)
+ Offs(22)
+ Offs(23)
+ Offs(24)
+ Offs(25)
+ Offs(26)
+ Offs(27)
+ Offs(28)
+ Offs(29)
+ Offs(30)
+ Offs(31)
+ Offs(32)
+

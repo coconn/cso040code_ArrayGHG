@@ -1,0 +1,72 @@
+'CR1000
+'Created by Short Cut (3.1)
+
+'Declare Variables and Units
+Public BattV
+Public PTemp_C
+Public LCount
+Public DiffV(20)
+
+
+Units BattV=Volts
+Units PTemp_C=Deg C
+Units DiffV=mV
+
+'Define Data Tables
+DataTable(Table1,True,-1)
+	DataInterval(0,15,Min,10)
+	CardOut(0,-1)
+	Average(1,DiffV(1),FP2,False)
+	Average(1,DiffV(2),FP2,False)
+	Average(1,DiffV(3),FP2,False)
+	Average(1,DiffV(4),FP2,False)
+	Average(1,DiffV(5),FP2,False)
+	Average(1,DiffV(6),FP2,False)
+	Average(1,DiffV(7),FP2,False)
+	Average(1,DiffV(8),FP2,False)
+	Average(1,DiffV(9),FP2,False)
+	Average(1,DiffV(10),FP2,False)
+	Average(1,DiffV(11),FP2,False)
+	Average(1,DiffV(12),FP2,False)
+	Average(1,DiffV(13),FP2,False)
+	Average(1,DiffV(14),FP2,False)
+	Average(1,DiffV(15),FP2,False)
+	Average(1,DiffV(16),FP2,False)
+	Average(1,DiffV(17),FP2,False)
+	Average(1,DiffV(18),FP2,False)
+	Average(1,DiffV(19),FP2,False)
+	Average(1,DiffV(20),FP2,False)
+EndTable
+
+DataTable(Table2,True,-1)
+	DataInterval(0,1440,Min,10)
+	Minimum(1,BattV,FP2,False,False)
+EndTable
+
+'Main Program
+BeginProg
+	'Main Scan
+	Scan(1,Min,1,0)
+		'Default Datalogger Battery Voltage measurement 'BattV'
+		Battery(BattV)
+		'Default Wiring Panel Temperature measurement 'PTemp_C'
+		PanelTemp(PTemp_C,_60Hz)
+		'Turn AM16/32 Multiplexer On
+		PortSet(2,1)
+		Delay(0,150,mSec)
+		LCount=1
+		SubScan(0,uSec,20)
+			'Switch to next AM16/32 Multiplexer channel
+			PulsePort(1,10000)
+			'Generic Differential Voltage measurements 'DiffV()' on the AM16/32 Multiplexer
+			VoltDiff(DiffV(LCount),1,mV2500,1,True,0,_60Hz)
+			LCount=LCount+1
+		NextSubScan
+		'Turn AM16/32 Multiplexer Off
+		PortSet(2,0)
+		Delay(0,150,mSec)
+		'Call Data Tables and Store Data
+		CallTable Table1
+		CallTable Table2
+	NextScan
+EndProg

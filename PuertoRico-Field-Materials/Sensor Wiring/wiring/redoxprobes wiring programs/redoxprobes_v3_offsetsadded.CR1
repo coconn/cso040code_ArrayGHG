@@ -1,0 +1,87 @@
+'CR1000
+'Created by Short Cut (3.1)
+
+
+Const NUM_SENS = 32      'change this to reflect number of redox probes
+
+'Declare Variables
+Public BattV
+Public PTemp_C
+Public DiffV(NUM_SENS)
+Public Mult(32)={1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+Public Offs(32)={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+'Declare Units
+Units BattV=Volts
+Units PTemp_C=Deg C
+Units DiffV=mV
+
+Dim i                    'general purpose counter
+
+'Define data table
+DataTable(oxygenEVJune2015,True,-1)        
+	DataInterval(0,60,Min,10)
+	Minimum(NUM_SENS,signal,FP2,False,False)
+	Maximum(NUM_SENS,signal,FP2,False,False)
+	Average(NUM_SENS,signal,FP2,False)
+	Sample(NUM_SENS,signal,FP2)
+	Minimum(NUM_SENS,temp,FP2,False,False)
+	Maximum(NUM_SENS,temp,FP2,False,False)
+	Average(NUM_SENS,temp,FP2,False)
+	Sample(NUM_SENS,temp,FP2)
+EndTable
+
+
+'Define Data Tables
+
+DataTable(databox4,True,-1)        
+	DataInterval(0,1,Min,10)
+	Average(NUM_SENS,DiffV,FP2,False)
+	StdDev(NUM_SENS,DiffV,FP2,False)
+EndTable
+
+DataTable(DailyBatt2016,True,-1)     'daily data table storing CR1000 battery data
+  DataInterval(0,24,Hr,2)
+  Minimum(1,vBatt,FP2,False,False)
+EndTable
+
+
+
+
+
+
+
+'Main Program
+BeginProg
+    'Main Scan
+    Scan(1,Min,1,0)
+        'Default Datalogger Battery Voltage measurement 'BattV'
+        Battery(BattV)
+        'Default Wiring Panel Temperature measurement 'PTemp_C'
+        PanelTemp(PTemp_C,_60Hz)
+        'Turn AM16/32 Multiplexer On
+        PortSet(2,1)
+        Delay(0,150,mSec)
+        
+        For i = 1 To NUM_SENS          'execute measurement code for each sensor
+        			
+        	PulsePort(1,10000)                      'switch AM16/32B to next channel
+			'Generic Differential Voltage measurements 'DiffV()' on the AM16/32 Multiplexer
+            'VoltDiff(DiffV(LCount),1,mV2500,1,True,0,_60Hz)
+            'Tyler thinks that this line is messed up because of the offsets not being defined
+            'this next line makes sure to define the offsets
+            VoltDiff(DiffV(LCount),1,mV2500,1,True,0,_60Hz,Mult(LCount),Offs(LCount))
+
+            
+            Next i
+		PortSet(2,0)                              'turn off AM16/32B
+            
+        Delay(0,150,mSec)
+        'Call Data Tables and Store Data
+        CallTable databox4
+        CallTable DailyBatt2016
+        
+    NextScan
+EndProg
+
+
