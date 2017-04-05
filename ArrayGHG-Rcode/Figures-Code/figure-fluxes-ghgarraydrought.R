@@ -701,6 +701,11 @@ arrayGHGdf$DroughtTimePds <- as.factor(arrayGHGdf$DroughtTimePds)
 print(levels(arrayGHGdf$DroughtTimePds))
 arrayGHGdf$DroughtTimePds <- factor(arrayGHGdf$DroughtTimePds,levels(arrayGHGdf$DroughtTimePds)[c(4,1,2,3)])
 
+# save final GHG flux csv
+fname = paste(pathsavetab, "arrayGHGdf_processed.csv" ,sep="")
+write.csv(arrayGHGdf, file = fname, na = "")
+
+
 # get means, std, ste for each period
 
 # summarySE using plyr

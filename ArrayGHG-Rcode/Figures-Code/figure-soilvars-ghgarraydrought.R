@@ -113,6 +113,18 @@ summarytabSoilVarsPoCombo <- summarySE(data=soilvardf, measurevar="PoCombo", c("
 # get rid of weird categories
 summarytabSoilVarsPoCombo <- subset(summarytabSoilVarsPoCombo, summarytabSoilVarsPoCombo$N>0)
 
+# save csvs
+fname = paste(pathsavetab, "drought_periods_summarytable_topo_pH.csv" ,sep="")
+write.csv(summarytabSoilVarspH, file = fname, na = "")
+fname = paste(pathsavetab, "drought_periods_summarytable_topo_FeII.csv" ,sep="")
+write.csv(summarytabSoilVarsFeII, file = fname, na = "")
+fname = paste(pathsavetab, "drought_periods_summarytable_topo_FeIII.csv" ,sep="")
+write.csv(summarytabSoilVarsFeIII, file = fname, na = "")
+fname = paste(pathsavetab, "drought_periods_summarytable_topo_Pi.csv" ,sep="")
+write.csv(summarytabSoilVarsPiCombo, file = fname, na = "")
+fname = paste(pathsavetab, "drought_periods_summarytable_topo_Po.csv" ,sep="")
+write.csv(summarytabSoilVarsPoCombo, file = fname, na = "")
+
 
 ########################################################################
 # TWO-WAY REPEATED MEASURES ANOVA OF VARS BY DROUGHT PERIOD, TOPO: PH
