@@ -531,6 +531,9 @@ aov_twoway_droughttopo = aov(log(CO2_umolm2s_fluxuse) ~ DroughtTimePds + Topo + 
 ########################################################################
 # OXYGEN AND MOISTURE TIME SERIES
 
+# save summarytab2 as a csv since that's the final version you're using in the paper
+# write.csv(summarytab2, file=paste(pathsavefiles, "arraysensorsdf_moisturedailysummarystats_finalpaperdataset_4-11-2017.csv", sep = ""), row.names=FALSE)
+
 # many color options christine was looking into when switching to a defined color map and not ggplot default
 topocolors <- rev(colorRampPalette(c('red','orange','purple','blue','dark blue'), space = "Lab")(7))
 #topocolors <- heat_hcl(7, h=c(0,-100), l=c(75,40), c=c(40,80), power=1)
